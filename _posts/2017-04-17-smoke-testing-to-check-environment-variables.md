@@ -28,8 +28,6 @@ namespace Tests\SmokeTesting;
 use Symfony\Component\Dotenv\Dotenv;
 
 /**
- * Note that existing environment variables are never overridden.
- *
  * @author bernardosecades
  * @link http://symfony.com/doc/master/components/dotenv.html
  */
