@@ -142,5 +142,5 @@ doctrine:
 
 # Conclusion
 
-Whatever option is valid but I prefer the option 2 because you do depend of third parts like `incenteev\parameterHandler` to
+Whatever option is valid but I prefer the option 2 because you do not depend of third parts like `incenteev\parameterHandler` to
 set up in right way options from infrastructure layer.
