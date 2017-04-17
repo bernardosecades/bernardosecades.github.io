@@ -143,4 +143,4 @@ doctrine:
 # Conclusion
 
 Whatever option is valid but I prefer the option 2 because you do not depend of third parts like `incenteev\parameterHandler` to
-set up in right way options from infrastructure layer and look a solution more standard.
+set up in right way options from infrastructure layer and looks a solution more standard.
