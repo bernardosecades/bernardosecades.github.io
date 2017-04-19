@@ -140,6 +140,67 @@ doctrine:
 {% endhighlight %}
 
 
+# Environment "Dev"
+
+To avoid execute in each session the command `source .env.dist` or persist environment variables in dev environment we can modify next symfony files:
+
+- bin/console
+- web/app_dev.php
+
+**bin/console** file:
+
+{% highlight php startinline %}
+#!/usr/bin/env php
+<?php
+
+// ...
+use Symfony\Component\Dotenv\Dotenv;
+
+// ...
+
+// New!! Load environment variables with dotenv component
+if ('dev' === $env) {
+    $dotenv = new Dotenv();
+    $dotenv->load(__DIR__.'/../.env.dist');
+}
+
+// ...
+{% endhighlight %}
+
+**web/app_dev.php** file:
+
+{% highlight php startinline %}
+<?php
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
+use Symfony\Component\Dotenv\Dotenv;
+// ...
+
+// Note: we do not check environment because we are in app_dev.php entry.
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__.'/../.env.dist');
+
+// ...
+{% endhighlight %}
+
+To phpunit.xml.dist you can do something similar loading bootstrap file,
+you can call bootstrap_dev.php and load in your xml phpunit.xml.dist:
+
+{% highlight xml startinline %}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="bootstrap_dev.php"
+>
+{% endhighlight %}
+
+
+
 # Conclusion
 
 Whatever option is valid but I prefer the option 2 because you do not depend of third parts like `incenteev\parameterHandler` to
