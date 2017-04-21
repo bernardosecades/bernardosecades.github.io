@@ -4,3 +4,9 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+
+<ul class="tags">
+{% for tag in post.tags %}
+  <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+{% endfor %}
+</ul>

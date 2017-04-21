@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Software Development, Agile, PHP and Node.js lover. Have fun developing on go and scala.
+Software Development, Agile, PHP and Node.js lover. Have fun developing on go and scala. See my profile in [Linkedin](https://www.linkedin.com/in/bernardosecades).
 
-[My Github](https://github.com/bernardosecades)
+Open Source:
 
-[My Linkedin](https://www.linkedin.com/in/bernardosecades)
+[Github](https://github.com/bernardosecades)
+
+[Packagist](https://packagist.org/packages/bernardosecades)
