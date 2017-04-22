@@ -11,3 +11,5 @@ Open Source:
 [Github](https://github.com/bernardosecades)
 
 [Packagist](https://packagist.org/packages/bernardosecades)
+
+[npm](https://www.npmjs.com/~bernardosecades)
