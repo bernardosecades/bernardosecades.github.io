@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Runtime Environment variables in Symfony"
+title:  "Runtime environment variables in symfony"
 date:   2017-04-16 18:18:36 +0200
 categories: symfony
 ---
