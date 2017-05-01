@@ -75,7 +75,7 @@ class AppKernel extends Kernel
 }
 {% endhighlight %}
 
-Create the file `config_test.yml` with next lines to load our services in test environment:
+Create the file `config_test.yml` with next lines to load your services in test environment:
 
 {% highlight yml startinline linenos=table %}
 
@@ -117,7 +117,7 @@ the environment, in this case, environment `test`:
 namespace Tests\Functional;
 
 use Tests\AppKernel;
-use BernardoSecades\FunctionalTestBundle\Lib\MyService;
+use BernardoSecades\NameBundleWeAreWorkingBundle\Lib\MyService;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
