@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RabbitMQ Setup Fabric"
-date:   2017-05-02 13:51:36 +0200
+date:   2017-05-06 13:51:36 +0200
 categories: composer
 ---
 
