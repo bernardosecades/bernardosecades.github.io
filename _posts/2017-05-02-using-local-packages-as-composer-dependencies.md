@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using local packages as composer dependencies"
-date:   2017-05-05 13:51:36 +0200
+date:   2017-05-02 13:51:36 +0200
 categories: composer
 ---
 
