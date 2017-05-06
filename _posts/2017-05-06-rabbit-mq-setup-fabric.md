@@ -15,7 +15,7 @@ bundle provide you commands to setup exchanges and queues reading your settings 
 The problem is when you are working with services in differents languages, it will be missing some queues or exchanges are not defined in your symfony application, probably your system is using a producer from symfony but
 the consumer is implemented in other technology like scala, node.js, ...
 
-So if you want use a command to setup all queues and exchanges for your platform maybe the next command can be useful for you.
+So if you want to use a command to setup all queues and exchanges for your platform maybe the next command can be useful for you.
 
 # Usage
 
