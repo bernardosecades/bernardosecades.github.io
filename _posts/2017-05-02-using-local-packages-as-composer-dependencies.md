@@ -56,7 +56,7 @@ We going to suppose we are working in package `myPackage` and we want to share w
 }
 ```
 
-Instead of put url of repository we put the repository will be in local path (`"type":"path"`) indicate
+Instead of put the url of repository we put the repository will be in local path (`"type":"path"`) indicate
 our local path.
 
 To easily the development we can put options `"symlink": true`, so when we will modify our package `myPackage`
