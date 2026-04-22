@@ -1,0 +1,24 @@
+title: "Legal — Apps"
+description: "Terms and Conditions and Privacy Policies for our mobile applications"
+author: "[DEVELOPER 1] & [DEVELOPER 2]"
+email: "[CONTACT EMAIL]"
+
+# For GitHub Pages project site set this to "/your-repo-name"
+# For a user/org site (username.github.io) leave it empty
+baseurl: ""
+url: "https://[YOUR-USERNAME].github.io"
+
+# No external theme — custom layout in _layouts/default.html
+theme: ~
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .claude/
