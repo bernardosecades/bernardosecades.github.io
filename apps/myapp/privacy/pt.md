@@ -80,7 +80,26 @@ O App é operado a partir da **Espanha** (União Europeia). Se você estiver loc
 
 Podemos atualizar esta Política de Privacidade periodicamente. Quando o fizermos, revisaremos a data no início desta página. Para alterações significativas, forneceremos aviso adicional (como uma notificação no App quando viável). O uso continuado do App após quaisquer alterações constitui sua aceitação da Política atualizada.
 
-## 10. Contato
+## 10. RGPD — Usuários da UE/EEE
+
+Se você estiver localizado na União Europeia ou no Espaço Econômico Europeu, o seguinte se aplica em adição ao restante desta Política de Privacidade.
+
+**Controlador de Dados**  
+**[DESENVOLVEDOR 1]** e **[DESENVOLVEDOR 2]** são os controladores conjuntos dos dados pessoais processados por meio do App. Contato: [E-MAIL DE CONTATO]
+
+**Base Legal para o Tratamento**  
+Tratamos os dados técnicos limitados descritos na Seção 1 com base em nossos **interesses legítimos** (Art. 6(1)(f) RGPD) para diagnosticar problemas e melhorar a estabilidade e o desempenho do App. Não realizamos nenhum tratamento que se sobreponha aos seus direitos e liberdades fundamentais.
+
+**Direitos Adicionais sob o RGPD**  
+Além dos direitos listados na Seção 7, os residentes na UE/EEE também têm direito a:
+
+- **Portabilidade de dados** — receber seus dados em um formato estruturado, de uso comum e legível por máquina
+- **Apresentar uma reclamação** — apresentar uma reclamação à sua autoridade local de proteção de dados. Se você estiver na Espanha, a autoridade competente é a **Agência Espanhola de Proteção de Dados (AEPD)**: [www.aepd.es](https://www.aepd.es)
+
+**Ausência de Tomada de Decisão Automatizada**  
+Não usamos seus dados para tomada de decisão automatizada ou criação de perfis que produzam efeitos jurídicos ou igualmente significativos sobre você.
+
+## 11. Contato
 
 Se você tiver perguntas ou dúvidas sobre esta Política de Privacidade ou nossas práticas de dados, entre em contato conosco pelo:
 

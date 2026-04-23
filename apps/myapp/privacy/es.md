@@ -80,7 +80,26 @@ La App es operada desde **España** (Unión Europea). Si te encuentras fuera de 
 
 Podemos actualizar esta Política de Privacidad periódicamente. Cuando lo hagamos, revisaremos la fecha indicada al inicio de esta página. Para cambios significativos proporcionaremos notificación adicional (por ejemplo, una notificación dentro de la App cuando sea viable). El uso continuado de la App tras cualquier cambio implica la aceptación de la Política actualizada.
 
-## 10. Contacto
+## 10. RGPD — Usuarios de la UE/EEE
+
+Si te encuentras en la Unión Europea o el Espacio Económico Europeo, lo siguiente aplica adicionalmente al resto de esta Política de Privacidad.
+
+**Responsable del tratamiento**  
+**[DESARROLLADOR 1]** y **[DESARROLLADOR 2]** son los responsables conjuntos del tratamiento de los datos personales procesados a través de la App. Contacto: [CORREO DE CONTACTO]
+
+**Base jurídica del tratamiento**  
+Tratamos los datos técnicos limitados descritos en el apartado 1 sobre la base de nuestros **intereses legítimos** (art. 6.1.f RGPD) para diagnosticar problemas y mejorar la estabilidad y el rendimiento de la App. No realizamos ningún tratamiento que prevalezca sobre tus derechos y libertades fundamentales.
+
+**Derechos adicionales bajo el RGPD**  
+Además de los derechos indicados en el apartado 7, los residentes en la UE/EEE también tienen derecho a:
+
+- **Portabilidad de datos** — recibir tus datos en un formato estructurado, de uso común y legible por máquina
+- **Presentar una reclamación** — presentar una reclamación ante tu autoridad de control local. Si resides en España, la autoridad competente es la **Agencia Española de Protección de Datos (AEPD)**: [www.aepd.es](https://www.aepd.es)
+
+**Ausencia de decisiones automatizadas**  
+No utilizamos tus datos para tomar decisiones automatizadas ni para elaborar perfiles que produzcan efectos jurídicos o igualmente significativos sobre ti.
+
+## 11. Contacto
 
 Si tienes preguntas o dudas sobre esta Política de Privacidad o nuestras prácticas de datos, contáctanos en:
 

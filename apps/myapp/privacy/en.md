@@ -80,7 +80,26 @@ The App is operated from **Spain** (European Union). If you are located outside 
 
 We may update this Privacy Policy from time to time. When we do, we will revise the date at the top of this page. For significant changes we will provide additional notice (such as an in-app notification where feasible). Your continued use of the App after any changes constitutes acceptance of the updated Policy.
 
-## 10. Contact
+## 10. GDPR — EU/EEA Users
+
+If you are located in the European Union or European Economic Area, the following applies in addition to the rest of this Privacy Policy.
+
+**Data Controller**  
+**[DEVELOPER 1]** and **[DEVELOPER 2]** are the joint data controllers for the personal data processed through the App. Contact: [CONTACT EMAIL]
+
+**Legal Basis for Processing**  
+We process the limited technical data described in Section 1 on the basis of our **legitimate interests** (Art. 6(1)(f) GDPR) in diagnosing issues and improving the App's stability and performance. We do not carry out any processing that overrides your fundamental rights and freedoms.
+
+**Your Additional GDPR Rights**  
+In addition to the rights listed in Section 7, EU/EEA residents also have the right to:
+
+- **Data portability** — receive your data in a structured, commonly used, machine-readable format
+- **Lodge a complaint** — submit a complaint to your local data protection authority. If you are based in Spain, the competent authority is the **Agencia Española de Protección de Datos (AEPD)**: [www.aepd.es](https://www.aepd.es)
+
+**No Automated Decision-Making**  
+We do not use your data for automated decision-making or profiling that produces legal or similarly significant effects on you.
+
+## 11. Contact
 
 If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:
 
