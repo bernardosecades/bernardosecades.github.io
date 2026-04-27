@@ -16,6 +16,9 @@ highlighter: rouge
 kramdown:
   syntax_highlighter: rouge
 
+# Google Analytics 4 — paste your Measurement ID (G-XXXXXXXXXX). Leave empty to disable.
+google_analytics: "G-XKJT29TKF0"
+
 defaults:
   - scope:
       path: ""
