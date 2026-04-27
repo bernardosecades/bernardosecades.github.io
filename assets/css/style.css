@@ -262,26 +262,36 @@ code {
   color: #c7254e;
 }
 
-pre {
+pre,
+pre.highlight,
+.highlight,
+.highlighter-rouge .highlight,
+div.highlight pre {
   background: #1e1e1e;
   color: #f5f5f5;
   border-radius: 6px;
-  padding: 1rem 1.1rem;
   overflow-x: auto;
   line-height: 1.5;
+}
+
+pre,
+pre.highlight,
+div.highlight pre {
+  padding: 1rem 1.1rem;
   margin: 1rem 0;
 }
 
-pre code {
+.highlighter-rouge .highlight { padding: 0; margin: 1rem 0; }
+.highlighter-rouge .highlight pre { margin: 0; }
+
+pre code,
+pre.highlight code {
   background: transparent;
   border: 0;
   padding: 0;
   color: inherit;
   font-size: 0.875rem;
 }
-
-.highlight { background: transparent; }
-.highlight pre { margin: 0; }
 
 /* Rouge tokens (dark theme) */
 .highlight .c, .highlight .c1, .highlight .cm, .highlight .cs { color: #6a9955; font-style: italic; }
