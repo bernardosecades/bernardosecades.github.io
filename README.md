@@ -12,7 +12,7 @@ _layouts/
   default.html          ← header + language switcher
   home.html             ← per-language post listing
   post.html             ← single post view
-_posts/                 ← posts as YYYY-MM-DD-slug-<lang>.md
+_posts/<lang>/          ← posts: _posts/en/YYYY-MM-DD-slug.md (folder = category)
 assets/css/style.css
 ```
 
@@ -27,7 +27,12 @@ bundle exec jekyll serve
 Push to `main`. GitHub repo → Settings → Pages → Source: `main` / `/` (root).
 
 ### Adding a post
-Create two files in `_posts/`, one per language, sharing the same `ref`:
+Create two files (one per language) sharing the same `ref`:
+
+- `_posts/en/YYYY-MM-DD-slug.md`
+- `_posts/es/YYYY-MM-DD-slug.md`
+
+Front matter:
 
 ```yaml
 ---

@@ -21,7 +21,7 @@ defaults:
       type: posts
     values:
       layout: post
-      permalink: /:lang/:slug/
+      permalink: /:categories/:slug/
 
 exclude:
   - Gemfile
