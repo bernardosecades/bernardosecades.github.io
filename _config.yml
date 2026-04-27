@@ -11,6 +11,11 @@ url: "https://bernardosecades.github.io"
 # No external theme — custom layout in _layouts/
 theme: ~
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
 defaults:
   - scope:
       path: ""
