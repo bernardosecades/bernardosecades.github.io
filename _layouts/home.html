@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="post-list-intro">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+</section>
+
+{% assign posts = site.posts | where: "lang", page.lang %}
+
+{% if posts.size == 0 %}
+  <p class="empty">
+    {% if page.lang == 'es' %}Aún no hay posts. Vuelve pronto.{% else %}No posts yet. Check back soon.{% endif %}
+  </p>
+{% else %}
+<ul class="post-list">
+  {% for post in posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {% if page.lang == 'es' %}
+          {{ post.date | date: "%d/%m/%Y" }}
+        {% else %}
+          {{ post.date | date: "%b %-d, %Y" }}
+        {% endif %}
+      </time>
+      <span class="post-title">{{ post.title }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

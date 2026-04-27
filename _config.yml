@@ -1,14 +1,14 @@
-title: "Legal — Apps"
-description: "Terms and Conditions and Privacy Policies for our mobile applications"
-author: "[DEVELOPER 1] & [DEVELOPER 2]"
-email: "[CONTACT EMAIL]"
+title: "AI Tips & Tricks"
+description: "Tips and tricks for working with AI — bilingual blog (EN / ES)"
+author: "Bernardo"
+email: ""
 
 # For GitHub Pages project site set this to "/your-repo-name"
 # For a user/org site (username.github.io) leave it empty
 baseurl: ""
-url: "https://[YOUR-USERNAME].github.io"
+url: "https://bernardosecades.github.io"
 
-# No external theme — custom layout in _layouts/default.html
+# No external theme — custom layout in _layouts/
 theme: ~
 
 defaults:
@@ -16,6 +16,12 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:lang/:slug/
 
 exclude:
   - Gemfile

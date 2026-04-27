@@ -1,23 +1,24 @@
 ---
 layout: default
-title: "Legal Documents"
+title: "AI Tips & Tricks"
 permalink: /
 ---
 
-# Legal Documents
+# AI Tips &amp; Tricks
 
-Legal information for our mobile applications.
+<p class="lead">Notas y trucos sobre IA &middot; Notes and tricks about AI</p>
 
-<ul class="app-list">
+<ul class="lang-cards">
   <li>
-    <div class="app-name">[APP NAME]</div>
-    <div class="doc-links">
-      <a href="{{ site.baseurl }}/apps/myapp/terms/en/">Terms &amp; Conditions</a>
-      <a href="{{ site.baseurl }}/apps/myapp/privacy/en/">Privacy Policy</a>
-    </div>
+    <a href="{{ '/en/' | relative_url }}">
+      <strong>English</strong>
+      <span>Read the blog in English</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ '/es/' | relative_url }}">
+      <strong>Español</strong>
+      <span>Lee el blog en español</span>
+    </a>
   </li>
 </ul>
-
----
-
-*To add a new app, duplicate the `apps/myapp/` folder, rename it, and update this list.*

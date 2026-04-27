@@ -1,24 +1,41 @@
-## Terms & Conditions
+## AI Tips & Tricks
 
-_config.yml          ← configures the site (set your username and repo)
-Gemfile              ← for local development
-_layouts/default.html ← layout with EN | ES | PT language switcher
-assets/css/style.css  ← clean legal-style design
+Small bilingual (EN / ES) blog hosted on GitHub Pages with Jekyll.
 
-index.md                          ← home page with app list
-apps/myapp/index.md               ← table of links per language
-apps/myapp/terms/{en,es,pt}.md    ← T&C in 3 languages
-apps/myapp/privacy/{en,es,pt}.md  ← Privacy Policy in 3 languages
-apps/myapp/{terms,privacy}/index.md ← automatic redirects
+```
+_config.yml             ← site config + per-language post permalinks
+Gemfile                 ← for local development
+index.md                ← bilingual landing
+en/index.md             ← English post list (/en/)
+es/index.md             ← Spanish post list (/es/)
+_layouts/
+  default.html          ← header + language switcher
+  home.html             ← per-language post listing
+  post.html             ← single post view
+_posts/                 ← posts as YYYY-MM-DD-slug-<lang>.md
+assets/css/style.css
+```
 
-To deploy to GitHub Pages:
-1. Create a repo on GitHub, push this folder to main
-2. Settings → Pages → Source: main / / (root)
-3. Edit _config.yml: set your [YOUR-USERNAME] and if it's a project site (not user site) add baseurl: "/repo-name"
+### Local development
+```
+bundle install
+bundle exec jekyll serve
+# open http://localhost:4000
+```
 
-Before publishing to the App Store, find and replace all [PLACEHOLDER] values:
-- [APP NAME], [DEVELOPER 1], [DEVELOPER 2], [CONTACT EMAIL], [DATE], [CITY]
+### Deploy
+Push to `main`. GitHub repo → Settings → Pages → Source: `main` / `/` (root).
 
-To add another app: copy apps/myapp/ → apps/new-app/, update the front matter and add the entry in index.md.
+### Adding a post
+Create two files in `_posts/`, one per language, sharing the same `ref`:
 
-Liability is capped at the purchase price of the app — this is the standard for paid indie apps and passes App Store review.   
+```yaml
+---
+title: "..."
+date: 2026-04-27
+lang: en          # or: es
+ref: my-tip       # same value in both translations
+---
+```
+
+The language switcher uses `ref` to link a post to its translation. If a translation doesn't exist yet, it falls back to the language home page.

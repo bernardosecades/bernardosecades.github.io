@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
-  <meta name="robots" content="noindex">
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <header>
     <div class="container header-inner">
       <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-      {% if page.app and page.doc %}
       <nav class="lang-switcher" aria-label="Language">
-        <a href="{{ site.baseurl }}/apps/{{ page.app }}/{{ page.doc }}/en/"{% if page.lang == 'en' %} class="active" aria-current="page"{% endif %}>EN</a>
-        <a href="{{ site.baseurl }}/apps/{{ page.app }}/{{ page.doc }}/es/"{% if page.lang == 'es' %} class="active" aria-current="page"{% endif %}>ES</a>
-        <a href="{{ site.baseurl }}/apps/{{ page.app }}/{{ page.doc }}/pt/"{% if page.lang == 'pt' %} class="active" aria-current="page"{% endif %}>PT</a>
+        {% if page.ref %}
+          {% assign en_match = site.posts | where: "ref", page.ref | where: "lang", "en" | first %}
+          {% assign es_match = site.posts | where: "ref", page.ref | where: "lang", "es" | first %}
+          <a href="{% if en_match %}{{ en_match.url | relative_url }}{% else %}{{ '/en/' | relative_url }}{% endif %}"{% if page.lang == 'en' %} class="active" aria-current="page"{% endif %}>EN</a>
+          <a href="{% if es_match %}{{ es_match.url | relative_url }}{% else %}{{ '/es/' | relative_url }}{% endif %}"{% if page.lang == 'es' %} class="active" aria-current="page"{% endif %}>ES</a>
+        {% else %}
+          <a href="{{ '/en/' | relative_url }}"{% if page.lang == 'en' %} class="active" aria-current="page"{% endif %}>EN</a>
+          <a href="{{ '/es/' | relative_url }}"{% if page.lang == 'es' %} class="active" aria-current="page"{% endif %}>ES</a>
+        {% endif %}
       </nav>
-      {% endif %}
     </div>
   </header>
 
@@ -29,7 +33,7 @@
 
   <footer>
     <div class="container">
-      <p>{{ site.author }} &copy; {{ "now" | date: "%Y" }} &middot; <a href="{{ '/' | relative_url }}">All apps</a></p>
+      <p>{{ site.author }} &copy; {{ "now" | date: "%Y" }}</p>
     </div>
   </footer>
 </body>
