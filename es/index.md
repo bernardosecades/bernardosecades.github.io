@@ -1,7 +1,8 @@
 ---
 layout: home
-title: "Tips y trucos de IA"
-description: "Tips y trucos prácticos para trabajar con IA."
+title: "AI Tips & Tricks"
+description: "Notas prácticas para trabajar con IA — por Bernardo Secades."
 permalink: /es/
 lang: es
+nav: home
 ---

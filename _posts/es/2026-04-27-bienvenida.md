@@ -3,6 +3,9 @@ title: "Bienvenida"
 date: 2026-04-27
 lang: es
 ref: welcome
+tags: [meta]
+read_min: 1
+excerpt_text: "Un nuevo hogar para notas cortas y prácticas sobre trabajar con herramientas de IA día a día."
 ---
 
 Este es el primer post del blog. A partir de aquí iré compartiendo **tips y trucos para trabajar con IA**: prompting, herramientas, agentes, evaluación y todo lo que vaya encontrando útil en el día a día.

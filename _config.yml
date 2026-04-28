@@ -11,6 +11,9 @@ url: "https://bernardosecades.github.io"
 # No external theme — custom layout in _layouts/
 theme: ~
 
+plugins:
+  - jekyll-feed
+
 markdown: kramdown
 highlighter: rouge
 kramdown:

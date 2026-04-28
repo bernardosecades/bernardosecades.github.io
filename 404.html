@@ -1,0 +1,24 @@
+---
+layout: default
+title: "Page not found"
+permalink: /404.html
+lang: en
+---
+<div class="nf-wrap">
+  <div class="nf-card">
+    <div class="nf-code"><span>404</span></div>
+    <h1 class="nf-h1">Page not found</h1>
+    <p class="nf-body">The page you were looking for might have been moved, renamed, or never existed.</p>
+    <div class="nf-actions">
+      <a class="nf-btn primary" href="{{ '/' | relative_url }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        Back home
+      </a>
+      <a class="nf-btn" href="{{ '/en/about/' | relative_url }}">About</a>
+    </div>
+    <div class="nf-shell">
+      <div><span class="prompt">~ $</span> <span class="cmd">find / -name "this-page"</span></div>
+      <div class="out">find: no matches</div>
+    </div>
+  </div>
+</div>

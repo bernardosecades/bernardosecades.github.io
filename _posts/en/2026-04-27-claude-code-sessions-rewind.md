@@ -3,6 +3,9 @@ title: "Claude Code: continue sessions and rewind changes"
 date: 2026-04-27
 lang: en
 ref: claude-code-sessions-rewind
+tags: [claude-code, workflow]
+read_min: 4
+excerpt_text: "Resume previous Claude Code sessions, branch from any point, and roll back unwanted edits with a single command."
 ---
 
 Three small Claude Code tricks I use every day.

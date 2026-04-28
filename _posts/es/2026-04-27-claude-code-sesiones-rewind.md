@@ -3,6 +3,9 @@ title: "Claude Code: continuar sesiones y deshacer cambios"
 date: 2026-04-27
 lang: es
 ref: claude-code-sessions-rewind
+tags: [claude-code, workflow]
+read_min: 4
+excerpt_text: "Reanuda sesiones previas de Claude Code, ramifica desde cualquier punto y deshaz ediciones con un comando."
 ---
 
 Tres pequeños trucos de Claude Code que uso todos los días.

@@ -1,25 +1,150 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
-      {% if page.lang == 'es' %}
-        {{ page.date | date: "%d/%m/%Y" }}
-      {% else %}
-        {{ page.date | date: "%b %-d, %Y" }}
+{%- assign cur_lang = page.lang | default: 'en' -%}
+{%- if cur_lang == 'es' -%}
+  {%- assign t_min = 'min de lectura' -%}
+  {%- assign t_author = 'Autor' -%}
+  {%- assign t_share = 'Compartir' -%}
+  {%- assign t_copy = 'Copiar enlace' -%}
+  {%- assign t_copied = '¡Copiado!' -%}
+  {%- assign t_suggested = 'Sigue leyendo' -%}
+  {%- assign t_back = '← Volver a todos los posts' -%}
+{%- else -%}
+  {%- assign t_min = 'min read' -%}
+  {%- assign t_author = 'Author' -%}
+  {%- assign t_share = 'Share' -%}
+  {%- assign t_copy = 'Copy link' -%}
+  {%- assign t_copied = 'Copied!' -%}
+  {%- assign t_suggested = 'Suggested next' -%}
+  {%- assign t_back = '← Back to all posts' -%}
+{%- endif -%}
+
+{%- assign all_lang_posts = site.posts | where: "lang", cur_lang -%}
+{%- assign other_posts = '' | split: '' -%}
+{%- for p in all_lang_posts -%}
+  {%- if p.url != page.url -%}
+    {%- assign other_posts = other_posts | push: p -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="container">
+  <article>
+    <header class="post-head">
+      <div class="meta-row">
+        <span>
+          {% if cur_lang == 'es' %}
+            {%- assign m = page.date | date: '%-m' | minus: 1 -%}
+            {%- assign months = 'ene,feb,mar,abr,may,jun,jul,ago,sep,oct,nov,dic' | split: ',' -%}
+            {{ page.date | date: '%-d' }} {{ months[m] }} {{ page.date | date: '%Y' }}
+          {% else %}
+            {{ page.date | date: "%b %-d, %Y" }}
+          {% endif %}
+        </span>
+        {% if page.read_min %}
+          <span class="dot"></span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            {{ page.read_min }} {{ t_min }}
+          </span>
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.excerpt_text %}<p class="lede">{{ page.excerpt_text }}</p>{% endif %}
+      {% if page.tags and page.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
       {% endif %}
-    </time>
-  </header>
+    </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+    <div class="post-toolbar">
+      <div class="author">
+        <span class="avatar">BS</span>
+        <span><b>{{ site.author }}</b> · {{ t_author }}</span>
+      </div>
+      <div class="share">
+        <span class="label">{{ t_share }}</span>
+        {%- assign post_url = page.url | absolute_url -%}
+        {%- assign post_title_enc = page.title | url_encode -%}
+        <a class="icon-btn" href="https://twitter.com/intent/tweet?url={{ post_url | url_encode }}&text={{ post_title_enc }}" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ post_url | url_encode }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0z"/></svg>
+        </a>
+        <button type="button" class="icon-btn" id="copy-link" data-copy="{{ t_copy }}" data-copied="{{ t_copied }}" aria-label="{{ t_copy }}" title="{{ t_copy }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+        </button>
+      </div>
+    </div>
 
-  <p class="back-link">
-    <a href="{{ '/' | append: page.lang | append: '/' | relative_url }}">
-      {% if page.lang == 'es' %}← Volver al blog{% else %}← Back to blog{% endif %}
-    </a>
-  </p>
-</article>
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    {% if other_posts.size > 0 %}
+    <section class="suggested">
+      <h3>{{ t_suggested }}</h3>
+      <div class="suggested-list">
+        {% for p in other_posts limit:3 %}
+          <a class="post-row" href="{{ p.url | relative_url }}">
+            <span class="date">
+              {% if cur_lang == 'es' %}
+                {%- assign m = p.date | date: '%-m' | minus: 1 -%}
+                {%- assign months = 'ene,feb,mar,abr,may,jun,jul,ago,sep,oct,nov,dic' | split: ',' -%}
+                {{ p.date | date: '%-d' }} {{ months[m] }} {{ p.date | date: '%Y' }}
+              {% else %}
+                {{ p.date | date: "%b %-d, %Y" }}
+              {% endif %}
+            </span>
+            <div class="body">
+              <h2 class="title">{{ p.title }}</h2>
+              {% if p.tags and p.tags.size > 0 %}
+              <div class="tags">
+                {% for tag in p.tags limit:2 %}<span class="tag">{{ tag }}</span>{% endfor %}
+              </div>
+              {% endif %}
+            </div>
+            {% if p.read_min %}<span class="read">{{ p.read_min }} {{ t_min }}</span>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {%- if cur_lang == 'es' -%}{%- assign back_url = '/es/' -%}{%- else -%}{%- assign back_url = '/en/' -%}{%- endif -%}
+    <a class="back-link" href="{{ back_url | relative_url }}">{{ t_back }}</a>
+  </article>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-link');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var url = window.location.href;
+      var done = function () {
+        var lbl = btn.getAttribute('data-copied');
+        btn.setAttribute('title', lbl);
+        btn.setAttribute('aria-label', lbl);
+        setTimeout(function () {
+          var orig = btn.getAttribute('data-copy');
+          btn.setAttribute('title', orig);
+          btn.setAttribute('aria-label', orig);
+        }, 1400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done).catch(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = url;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  })();
+</script>
