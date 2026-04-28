@@ -1,0 +1,23 @@
+---
+permalink: /
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Tips &amp; Tricks</title>
+  <meta http-equiv="refresh" content="0; url={{ '/en/' | relative_url }}">
+  <link rel="canonical" href="{{ '/en/' | absolute_url }}">
+  <script>
+    (function () {
+      var lang = (navigator.language || 'en').toLowerCase();
+      var target = lang.indexOf('es') === 0 ? '{{ "/es/" | relative_url }}' : '{{ "/en/" | relative_url }}';
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="{{ '/en/' | relative_url }}">the blog</a>…</p>
+</body>
+</html>
