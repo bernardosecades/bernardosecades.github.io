@@ -6,7 +6,7 @@ email: ""
 # For GitHub Pages project site set this to "/your-repo-name"
 # For a user/org site (username.github.io) leave it empty
 baseurl: ""
-url: "https://bernardosecades.github.io"
+url: "https://claudecodesessions.com"
 
 # No external theme — custom layout in _layouts/
 theme: ~

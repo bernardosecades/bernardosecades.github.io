@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bernardosecades.github.io/sitemap.xml
+Sitemap: https://claudecodesessions.com/sitemap.xml
