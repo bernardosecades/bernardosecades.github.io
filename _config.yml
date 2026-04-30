@@ -39,4 +39,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - CLAUDE.md
+  - bernie_next_posts.md
   - .claude/
