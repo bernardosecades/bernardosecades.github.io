@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: continuar sesiones y deshacer cambios"
-date: 2026-04-27 09:00:00
+date: 2026-04-27 11:00:00
 lang: es
 ref: claude-code-sessions-rewind
 tags: [claude-code, workflow]

@@ -18,7 +18,7 @@ layout: default
   {%- assign t_empty = 'No posts yet. Check back soon.' -%}
 {%- endif -%}
 
-{%- assign posts = site.posts | where: "lang", cur_lang -%}
+{%- assign posts = site.posts | where: "lang", cur_lang | sort: 'date' | reverse -%}
 
 <div class="container">
   <section class="home-hero">
