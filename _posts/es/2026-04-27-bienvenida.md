@@ -1,6 +1,6 @@
 ---
 title: "Bienvenida"
-date: 2026-04-27
+date: 2026-04-27 10:00:00
 lang: es
 ref: welcome
 tags: [meta]

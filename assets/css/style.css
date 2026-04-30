@@ -374,6 +374,44 @@ html[data-theme="dark"] .icon-btn .icon-moon { display: none; }
 .highlight .nt { color: #e06c75; }
 .highlight .na { color: #d19a66; }
 
+/* ── Newsletter CTA (post footer) ────────────────────────────────────── */
+.newsletter-cta {
+  margin-top: 56px; padding: 24px 28px;
+  background: var(--bg-elev); border: 1px solid var(--line); border-radius: 10px;
+}
+.newsletter-cta h3 {
+  font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--fg-mute); margin: 0 0 8px; font-weight: 700;
+}
+.newsletter-cta > p {
+  font-family: var(--serif); font-size: 17px; color: var(--fg-soft); margin: 0 0 16px;
+}
+.newsletter-cta form { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-start; }
+.newsletter-cta input[type="email"] {
+  flex: 1; min-width: 200px;
+  padding: 9px 12px; border: 1px solid var(--line); border-radius: 7px;
+  background: var(--bg); color: var(--fg);
+  font-family: var(--sans); font-size: 14px;
+  outline: none; transition: border-color .15s;
+}
+.newsletter-cta input[type="email"]:focus { border-color: var(--accent); }
+.newsletter-cta input[type="email"]::placeholder { color: var(--fg-mute); }
+.newsletter-cta input[type="submit"] {
+  padding: 9px 18px; border-radius: 7px; border: none;
+  background: var(--fg); color: var(--bg);
+  font-family: var(--sans); font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: background .15s, color .15s; white-space: nowrap;
+}
+.newsletter-cta input[type="submit"]:hover { background: var(--accent); color: #fff; }
+.newsletter-cta .bd-credit {
+  width: 100%; margin: 8px 0 0;
+  font-family: var(--mono); font-size: 11px; color: var(--fg-mute);
+}
+.newsletter-cta .bd-credit a {
+  color: var(--fg-mute); text-decoration: underline; text-underline-offset: 2px;
+}
+.newsletter-cta .bd-credit a:hover { color: var(--accent); }
+
 .suggested {
   margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line);
 }

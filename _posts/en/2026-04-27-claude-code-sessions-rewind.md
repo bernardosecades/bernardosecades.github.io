@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: continue sessions and rewind changes"
-date: 2026-04-27
+date: 2026-04-27 09:00:00
 lang: en
 ref: claude-code-sessions-rewind
 tags: [claude-code, workflow]

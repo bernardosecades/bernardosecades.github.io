@@ -10,6 +10,9 @@ layout: default
   {%- assign t_copied = '¡Copiado!' -%}
   {%- assign t_suggested = 'Sigue leyendo' -%}
   {%- assign t_back = '← Volver a todos los posts' -%}
+  {%- assign t_nl_desc = 'Nuevos posts directamente en tu bandeja de entrada.' -%}
+  {%- assign t_nl_placeholder = 'tu@email.com' -%}
+  {%- assign t_nl_submit = 'Suscribirme' -%}
 {%- else -%}
   {%- assign t_min = 'min read' -%}
   {%- assign t_author = 'Author' -%}
@@ -18,6 +21,9 @@ layout: default
   {%- assign t_copied = 'Copied!' -%}
   {%- assign t_suggested = 'Suggested next' -%}
   {%- assign t_back = '← Back to all posts' -%}
+  {%- assign t_nl_desc = 'New posts straight to your inbox.' -%}
+  {%- assign t_nl_placeholder = 'you@example.com' -%}
+  {%- assign t_nl_submit = 'Subscribe' -%}
 {%- endif -%}
 
 {%- assign all_lang_posts = site.posts | where: "lang", cur_lang -%}
@@ -78,6 +84,18 @@ layout: default
     <div class="prose">
       {{ content }}
     </div>
+
+    <section class="newsletter-cta">
+      <h3>Newsletter</h3>
+      <p>{{ t_nl_desc }}</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/bernardosecades" method="post">
+        <input type="email" name="email" id="bd-email" placeholder="{{ t_nl_placeholder }}" required />
+        <input type="submit" value="{{ t_nl_submit }}" />
+        <p class="bd-credit">
+          <a href="https://buttondown.com/refer/bernardosecades" target="_blank" rel="noopener">Powered by Buttondown</a>
+        </p>
+      </form>
+    </section>
 
     {% if other_posts.size > 0 %}
     <section class="suggested">
