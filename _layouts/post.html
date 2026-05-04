@@ -91,6 +91,13 @@ layout: default
       <form action="https://buttondown.com/api/emails/embed-subscribe/bernardosecades" method="post">
         <input type="email" name="email" id="bd-email" placeholder="{{ t_nl_placeholder }}" required />
         <input type="submit" value="{{ t_nl_submit }}" />
+        <p class="bd-privacy">
+          {%- if cur_lang == 'es' -%}
+            Al suscribirte aceptas la <a href="/es/privacy/">política de privacidad</a>.
+          {%- else -%}
+            By subscribing you agree to the <a href="/en/privacy/">privacy policy</a>.
+          {%- endif -%}
+        </p>
         <p class="bd-credit">
           <a href="https://buttondown.com/refer/bernardosecades" target="_blank" rel="noopener">Powered by Buttondown</a>
         </p>
