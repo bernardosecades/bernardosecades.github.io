@@ -17,6 +17,17 @@ assets/css/style.css
 ```
 
 ### Local development
+
+#### With Docker (recommended)
+```
+docker run --rm --name jekyll-blog -v "$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll:4 jekyll serve --host 0.0.0.0 --force_polling
+# open http://localhost:4000
+# stop: docker stop jekyll-blog
+```
+
+`--force_polling` makes Jekyll detect file changes through the bind mount.
+
+#### With a local Ruby toolchain
 ```
 bundle install
 bundle exec jekyll serve

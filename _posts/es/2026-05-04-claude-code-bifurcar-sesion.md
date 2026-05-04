@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: nombra una sesión y bifúrcala para probar otro camino"
-date: 2026-05-04 10:00:00
+date: 2026-05-04 00:00:00
 lang: es
 ref: claude-code-fork-session
 tags: [claude-code, workflow]

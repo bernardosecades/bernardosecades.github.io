@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: name a session and fork it for an alternative path"
-date: 2026-05-04 10:00:00
+date: 2026-05-04 00:00:00
 lang: en
 ref: claude-code-fork-session
 tags: [claude-code, workflow]
