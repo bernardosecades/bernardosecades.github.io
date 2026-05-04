@@ -564,6 +564,14 @@ html[data-theme="dark"] .icon-btn .icon-moon { display: none; }
 .nf-shell .cmd    { color: var(--fg); }
 .nf-shell .out    { color: var(--fg-mute); }
 
+/* ── Video ────────────────────────────────────────────────────────────── */
+.prose video {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  margin: 1.5rem 0;
+}
+
 /* ── Responsive ───────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .container, .container-wide { padding: 0 20px; }
