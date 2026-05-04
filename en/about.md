@@ -17,6 +17,33 @@ about_ref: true
     <p>Beyond personal use, I've been working on cross-team adoption: sharing patterns that work, running demos, and building shared conventions so the whole team can get consistent value out of AI-assisted development without each person reinventing the wheel.</p>
   </div>
 
+  <section class="about-certs" aria-labelledby="certs-heading">
+    <h2 id="certs-heading" class="about-certs-title">Certifications</h2>
+    <ul class="cert-list">
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/us429rbhizpg" target="_blank" rel="noopener">Claude Code in Action</a>
+          <span class="cert-sub">Anthropic · Mar 2026 · <a href="https://verify.skilljar.com/c/us429rbhizpg" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/yf83vww2p9bj" target="_blank" rel="noopener">Introduction to Model Context Protocol</a>
+          <span class="cert-sub">Anthropic · Apr 2026 · <a href="https://verify.skilljar.com/c/yf83vww2p9bj" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/fwr55oo2jq2r" target="_blank" rel="noopener">Model Context Protocol: Advanced Topics</a>
+          <span class="cert-sub">Anthropic · Apr 2026 · <a href="https://verify.skilljar.com/c/fwr55oo2jq2r" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
   <div class="about-socials">
     <a href="https://linkedin.com/in/bernardosecades" target="_blank" rel="noopener">LinkedIn</a>
   </div>
