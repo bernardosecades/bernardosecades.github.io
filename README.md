@@ -20,17 +20,18 @@ assets/css/style.css
 
 #### With Docker (recommended)
 ```
-docker run --rm --name jekyll-blog -v "$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll:4 jekyll serve --host 0.0.0.0 --force_polling
+docker run --rm --name jekyll-blog -v "$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll:4 jekyll serve --host 0.0.0.0 --force_polling --future
 # open http://localhost:4000
 # stop: docker stop jekyll-blog
 ```
 
 `--force_polling` makes Jekyll detect file changes through the bind mount.
+`--future` includes posts dated after today (useful when previewing scheduled posts before they go live). Drop it to mirror what GitHub Pages will actually publish.
 
 #### With a local Ruby toolchain
 ```
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --future
 # open http://localhost:4000
 ```
 
