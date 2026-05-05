@@ -89,6 +89,7 @@ layout: default
       <h3>Newsletter</h3>
       <p>{{ t_nl_desc }}</p>
       <form action="https://buttondown.com/api/emails/embed-subscribe/bernardosecades" method="post">
+        <input type="hidden" name="metadata__lang" value="{{ cur_lang }}" />
         <input type="email" name="email" id="bd-email" placeholder="{{ t_nl_placeholder }}" required />
         <input type="submit" value="{{ t_nl_submit }}" />
         <p class="bd-privacy">
