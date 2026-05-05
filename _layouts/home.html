@@ -9,6 +9,13 @@ layout: default
   {%- assign t_updated = 'Actualizado semanalmente' -%}
   {%- assign t_rss_intro = 'Recibe nuevos posts en tu lector' -%}
   {%- assign t_empty = 'Aún no hay posts. Vuelve pronto.' -%}
+  {%- assign t_featured = 'Para empezar' -%}
+  {%- assign t_nl_desc = 'Nuevos posts directamente en tu bandeja de entrada.' -%}
+  {%- assign t_nl_placeholder = 'tu@email.com' -%}
+  {%- assign t_nl_submit = 'Suscribirme' -%}
+  {%- assign t_nl_privacy = 'Al suscribirte aceptas la' -%}
+  {%- assign t_nl_privacy_link = 'política de privacidad' -%}
+  {%- assign t_nl_privacy_url = '/es/privacy/' -%}
 {%- else -%}
   {%- assign t_posts = 'posts' -%}
   {%- assign t_min = 'min read' -%}
@@ -16,6 +23,13 @@ layout: default
   {%- assign t_updated = 'Updated weekly' -%}
   {%- assign t_rss_intro = 'Get new posts in your reader' -%}
   {%- assign t_empty = 'No posts yet. Check back soon.' -%}
+  {%- assign t_featured = 'Start here' -%}
+  {%- assign t_nl_desc = 'New posts straight to your inbox.' -%}
+  {%- assign t_nl_placeholder = 'you@example.com' -%}
+  {%- assign t_nl_submit = 'Subscribe' -%}
+  {%- assign t_nl_privacy = 'By subscribing you agree to the' -%}
+  {%- assign t_nl_privacy_link = 'privacy policy' -%}
+  {%- assign t_nl_privacy_url = '/en/privacy/' -%}
 {%- endif -%}
 
 {%- assign posts = site.posts | where: "lang", cur_lang | sort: 'date' | reverse -%}
@@ -23,7 +37,7 @@ layout: default
 <div class="container">
   <section class="home-hero">
     <h1>{{ page.title }}</h1>
-    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    {% if page.description %}<p class="hero-lede">{{ page.description }}</p>{% endif %}
     <div class="hero-meta">
       <span>{{ posts.size }} {{ t_posts }}</span>
       <span class="dot"></span>
@@ -31,6 +45,43 @@ layout: default
       <span class="dot"></span>
       <span class="accent">{{ t_updated }}</span>
     </div>
+  </section>
+
+  {% if page.featured and page.featured.size > 0 %}
+  <section class="feat-section">
+    <div class="section-label">{{ t_featured }}</div>
+    <div class="feat-grid">
+      {% for ref in page.featured %}
+        {%- assign feat_post = posts | where: "ref", ref | first -%}
+        {% if feat_post %}
+        <a class="feat-card" href="{{ feat_post.url | relative_url }}">
+          <div class="feat-card-body">
+            <h2>{{ feat_post.title }}</h2>
+            {% if feat_post.excerpt_text %}<p>{{ feat_post.excerpt_text }}</p>{% endif %}
+          </div>
+          <div class="feat-card-foot">
+            {% if feat_post.tags and feat_post.tags.size > 0 %}
+            <div class="tags">{% for tag in feat_post.tags limit:2 %}<span class="tag">{{ tag }}</span>{% endfor %}</div>
+            {% endif %}
+            {% if feat_post.read_min %}<span class="read">{{ feat_post.read_min }} {{ t_min }}</span>{% endif %}
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="home-newsletter">
+    <p>{{ t_nl_desc }}</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/bernardosecades" method="post">
+      <input type="hidden" name="metadata__lang" value="{{ cur_lang }}" />
+      <input type="email" name="email" placeholder="{{ t_nl_placeholder }}" required />
+      <input type="submit" value="{{ t_nl_submit }}" />
+    </form>
+    <p class="hn-privacy">
+      {{ t_nl_privacy }} <a href="{{ t_nl_privacy_url }}">{{ t_nl_privacy_link }}</a>.
+    </p>
   </section>
 
   {% if posts.size == 0 %}
