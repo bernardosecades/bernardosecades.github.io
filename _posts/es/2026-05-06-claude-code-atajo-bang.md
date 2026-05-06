@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: el atajo ! para ejecutar comandos de shell"
-date: 2026-05-14 00:00:00
+date: 2026-05-06 00:00:00
 lang: es
 ref: claude-code-bang-shortcut
 tags: [claude-code, shell, workflow]

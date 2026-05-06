@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: the ! shortcut for shell commands"
-date: 2026-05-14 00:00:00
+date: 2026-05-06 00:00:00
 lang: en
 ref: claude-code-bang-shortcut
 tags: [claude-code, shell, workflow]
