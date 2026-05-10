@@ -55,6 +55,13 @@ about_ref: true
           <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/gsdr8gpt8fbm" target="_blank" rel="noopener">Verify ↗</a></span>
         </div>
       </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/4bt8c9b6cg6j" target="_blank" rel="noopener">Claude 101</a>
+          <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/4bt8c9b6cg6j" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
     </ul>
   </section>
 
