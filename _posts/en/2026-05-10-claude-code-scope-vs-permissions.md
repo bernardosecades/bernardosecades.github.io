@@ -6,6 +6,12 @@ ref: claude-code-scope-vs-permissions
 tags: [claude-code, settings, permissions, workflow]
 read_min: 3
 excerpt_text: "The working directory decides what Claude can read. Actions — running commands, writing files, calling MCP tools — are governed by .claude/settings.json. Two different layers, easy to confuse."
+video:
+  src: /assets/videos/demo-settings-permissions.webm
+  thumbnail: /assets/videos/demo-settings-permissions.jpg
+  duration: PT27S
+  width: 1760
+  height: 1081
 ---
 
 The [previous post on multi-repo workspaces](/claude-code-multi-repo-workspace/) framed the working directory as what Claude can see. That's only half of the picture: it covers **reads**. The other half — **actions** like running a Bash command, writing a file, or calling an MCP tool — is governed by something else: `.claude/settings.json`.
@@ -51,7 +57,7 @@ These layers stack. A `deny` rule always wins, so a project-level deny overrides
 
 `allow` runs without prompting. `deny` is hard-blocked. Anything not matched falls into the default flow (Claude asks).
 
-<video controls playsinline>
+<video controls playsinline poster="/assets/videos/demo-settings-permissions.jpg">
   <source src="/assets/videos/demo-settings-permissions.webm" type="video/webm">
 </video>
 

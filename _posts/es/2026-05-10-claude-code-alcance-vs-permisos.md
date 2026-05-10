@@ -6,6 +6,12 @@ ref: claude-code-scope-vs-permissions
 tags: [claude-code, settings, permissions, workflow]
 read_min: 3
 excerpt_text: "El working directory decide qué puede leer Claude. Las acciones — ejecutar comandos, escribir ficheros, llamar herramientas MCP — se rigen por .claude/settings.json. Dos capas distintas, fáciles de confundir."
+video:
+  src: /assets/videos/demo-settings-permissions.webm
+  thumbnail: /assets/videos/demo-settings-permissions.jpg
+  duration: PT27S
+  width: 1760
+  height: 1081
 ---
 
 El [post anterior sobre workspace multi-repo](/claude-code-workspace-multi-repo/) presentaba el working directory como lo que Claude puede ver. Esa es sólo la mitad de la foto: cubre **lecturas**. La otra mitad — **acciones** como ejecutar un comando Bash, escribir un fichero o llamar a una herramienta MCP — se rige por otra cosa: `.claude/settings.json`.
@@ -51,7 +57,7 @@ Las capas se apilan. Una regla `deny` siempre gana, así que un deny a nivel pro
 
 `allow` se ejecuta sin pedir confirmación. `deny` está bloqueado de forma dura. Lo que no encaja en ninguna de las dos cae en el flujo por defecto (Claude pregunta).
 
-<video controls playsinline>
+<video controls playsinline poster="/assets/videos/demo-settings-permissions.jpg">
   <source src="/assets/videos/demo-settings-permissions.webm" type="video/webm">
 </video>
 

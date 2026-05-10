@@ -6,6 +6,12 @@ ref: claude-code-bang-shortcut
 tags: [claude-code, shell, workflow]
 read_min: 2
 excerpt_text: "Prefix a command with ! and it runs directly in your shell, bypassing the model entirely. Faster, and no tokens spent on a round-trip you don't need."
+video:
+  src: /assets/videos/demo-shell-command.webm
+  thumbnail: /assets/videos/demo-shell-command.jpg
+  duration: PT5S
+  width: 1585
+  height: 505
 ---
 
 `!` is a shortcut to run shell commands directly from the Claude Code prompt, without asking Claude to do it for you.
@@ -21,7 +27,7 @@ Prefix the command with `!`:
 !ls internal/
 ```
 
-<video controls playsinline>
+<video controls playsinline poster="/assets/videos/demo-shell-command.jpg">
   <source src="/assets/videos/demo-shell-command.webm" type="video/webm">
 </video>
 

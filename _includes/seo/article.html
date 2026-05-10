@@ -1,0 +1,28 @@
+{%- assign post_url = page.url | absolute_url -%}
+{%- assign published = page.date | date_to_xmlschema -%}
+{%- assign modified = page.last_modified_at | default: page.date | date_to_xmlschema -%}
+{%- assign post_lang = page.lang | default: 'en' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{ post_url }}#article",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ post_url }}" },
+  "url": "{{ post_url }}",
+  "headline": {{ page.title | strip_html | normalize_whitespace | jsonify }},
+  "description": {{ page.excerpt_text | default: page.title | strip_html | normalize_whitespace | jsonify }},
+  "inLanguage": {{ post_lang | jsonify }},
+  "datePublished": "{{ published }}",
+  "dateModified": "{{ modified }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author | jsonify }},
+    "url": "{{ '/' | append: post_lang | append: '/about/' | absolute_url }}"
+  },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  {%- if page.video and page.video.thumbnail %}
+  "image": ["{{ page.video.thumbnail | absolute_url }}"],
+  {%- endif %}
+  "keywords": {{ page.tags | join: ", " | jsonify }}
+}
+</script>

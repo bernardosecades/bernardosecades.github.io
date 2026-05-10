@@ -27,9 +27,14 @@ Push to `main`. GitHub repo Settings → Pages → Source: `main` / `/` (root).
   - `ref: <translation-id>` — same value across the EN and ES versions of the same article so the language switcher can link them.
 - **Permalinks** for posts default to `/:categories/:slug/` via `_config.yml`, e.g. `_posts/en/2026-04-27-welcome.md` → `/en/welcome/`.
 - **Layouts** (`_layouts/`):
-  - `default.html` — base shell, header with language switcher.
+  - `default.html` — base shell, header with language switcher. Emits all JSON-LD via `{% include seo/... %}`.
   - `home.html` — per-language post listing.
   - `post.html` — single post view.
+- **SEO / JSON-LD** (`_includes/seo/`): reusable schema partials emitted from `default.html`.
+  - `organization.html`, `website.html` — global, on every page.
+  - `article.html`, `breadcrumb.html` — emitted when `page.layout == "post"`.
+  - `video.html` — emitted only when a post declares `video:` frontmatter (see below).
+  - All strings go through `jsonify` (never `escape`) to keep JSON valid. One `<script>` per schema.
 
 ## Adding a new post
 
@@ -40,3 +45,28 @@ Push to `main`. GitHub repo Settings → Pages → Source: `main` / `/` (root).
 3. The language switcher on the post page will automatically link to the matching translation via the shared `ref`.
 
 If a post only exists in one language, the switcher falls back to the per-language home page.
+
+### Posts with embedded video
+
+If the post embeds a `<video>` from `/assets/videos/`, declare a `video:` block in the frontmatter and add a JPG poster next to the `.webm`:
+
+```yaml
+video:
+  src: /assets/videos/demo-foo.webm
+  thumbnail: /assets/videos/demo-foo.jpg   # required for VideoObject schema
+  duration: PT45S                          # ISO 8601: PT<min>M<sec>S
+  width: 1920                              # optional
+  height: 1080                             # optional
+```
+
+Also add the same path as `poster=` on the `<video>` tag so the still frame is consistent visually and in schema.
+
+Without `video:` frontmatter the VideoObject schema is silently skipped — useful when a `<video>` is embedded but the asset isn't ready yet.
+
+To extract a thumbnail and read duration from a `.webm` (system has GStreamer, no ffmpeg):
+
+```bash
+gst-launch-1.0 -q filesrc location=assets/videos/demo-foo.webm ! decodebin ! videoconvert ! jpegenc \
+  ! multifilesink location=assets/videos/demo-foo.jpg max-files=1 next-file=buffer
+gst-discoverer-1.0 assets/videos/demo-foo.webm | grep -E 'Duration|Width|Height'
+```

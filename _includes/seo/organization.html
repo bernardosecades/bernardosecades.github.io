@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "{{ '/' | absolute_url }}#organization",
+  "name": {{ site.title | jsonify }},
+  "url": "{{ '/' | absolute_url }}",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ '/assets/img/logo.png' | absolute_url }}",
+    "width": 512,
+    "height": 512
+  },
+  "sameAs": [
+    "https://github.com/bernardosecades",
+    "https://linkedin.com/in/bernardosecades"
+  ]
+}
+</script>

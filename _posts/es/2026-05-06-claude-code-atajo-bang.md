@@ -6,6 +6,12 @@ ref: claude-code-bang-shortcut
 tags: [claude-code, shell, workflow]
 read_min: 2
 excerpt_text: "Escribir ! antes de un comando lo ejecuta directamente en tu shell, sin pasar por el modelo. Más rápido, y sin gastar tokens en una vuelta que no necesitas."
+video:
+  src: /assets/videos/demo-shell-command.webm
+  thumbnail: /assets/videos/demo-shell-command.jpg
+  duration: PT5S
+  width: 1585
+  height: 505
 ---
 
 El `!` es un atajo para ejecutar comandos de shell directamente desde el prompt de Claude Code, sin tener que pedirle a Claude que lo haga por ti.
@@ -21,7 +27,7 @@ Escribes `!` al inicio de la línea seguido del comando:
 !ls internal/
 ```
 
-<video controls playsinline>
+<video controls playsinline poster="/assets/videos/demo-shell-command.jpg">
   <source src="/assets/videos/demo-shell-command.webm" type="video/webm">
 </video>
 

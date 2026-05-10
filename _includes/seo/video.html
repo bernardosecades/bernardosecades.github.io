@@ -1,0 +1,20 @@
+{%- assign video_src = page.video.src | absolute_url -%}
+{%- assign thumb = page.video.thumbnail | absolute_url -%}
+{%- assign uploaded = page.date | date_to_xmlschema -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "{{ page.url | absolute_url }}#video",
+  "name": {{ page.title | strip_html | normalize_whitespace | jsonify }},
+  "description": {{ page.excerpt_text | default: page.title | strip_html | normalize_whitespace | jsonify }},
+  "thumbnailUrl": ["{{ thumb }}"],
+  "uploadDate": "{{ uploaded }}",
+  "contentUrl": "{{ video_src }}",
+  "encodingFormat": "video/webm",
+  "isFamilyFriendly": true,
+  "inLanguage": {{ page.lang | default: "en" | jsonify }}
+  {%- if page.video.duration -%}, "duration": "{{ page.video.duration }}"{%- endif -%}
+  {%- if page.video.width and page.video.height -%}, "width": {{ page.video.width }}, "height": {{ page.video.height }}{%- endif %}
+}
+</script>
