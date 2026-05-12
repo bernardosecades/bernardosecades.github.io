@@ -76,6 +76,13 @@ about_ref: true
           <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/99myh8tt4tv6" target="_blank" rel="noopener">Verify ↗</a></span>
         </div>
       </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/imnudjtmig57" target="_blank" rel="noopener">AI Fluency for Students</a>
+          <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/imnudjtmig57" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
     </ul>
   </section>
 
