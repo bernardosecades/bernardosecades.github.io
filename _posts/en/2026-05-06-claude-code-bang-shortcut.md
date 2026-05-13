@@ -27,7 +27,7 @@ Prefix the command with `!`:
 !ls internal/
 ```
 
-<video controls playsinline poster="/assets/videos/demo-shell-command.jpg">
+<video controls playsinline preload="none" poster="/assets/videos/demo-shell-command.jpg">
   <source src="/assets/videos/demo-shell-command.webm" type="video/webm">
 </video>
 

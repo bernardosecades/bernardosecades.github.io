@@ -69,7 +69,7 @@ Tres modos:
 
 El contrato es siempre el mismo: prompt entra, un mensaje de texto final sale. Esa es toda la interfaz.
 
-<video controls playsinline poster="/assets/videos/demo_subagents.jpg">
+<video controls playsinline preload="none" poster="/assets/videos/demo_subagents.jpg">
   <source src="/assets/videos/demo_subagents.webm" type="video/webm">
 </video>
 

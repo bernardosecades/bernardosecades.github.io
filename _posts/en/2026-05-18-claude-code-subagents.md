@@ -69,7 +69,7 @@ Three modes:
 
 The contract is always the same: prompt in, one final text message out. That's the whole interface.
 
-<video controls playsinline poster="/assets/videos/demo_subagents.jpg">
+<video controls playsinline preload="none" poster="/assets/videos/demo_subagents.jpg">
   <source src="/assets/videos/demo_subagents.webm" type="video/webm">
 </video>
 

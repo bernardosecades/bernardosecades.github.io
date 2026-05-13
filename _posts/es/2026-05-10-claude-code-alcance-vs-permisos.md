@@ -57,7 +57,7 @@ Las capas se apilan. Una regla `deny` siempre gana, así que un deny a nivel pro
 
 `allow` se ejecuta sin pedir confirmación. `deny` está bloqueado de forma dura. Lo que no encaja en ninguna de las dos cae en el flujo por defecto (Claude pregunta).
 
-<video controls playsinline poster="/assets/videos/demo-settings-permissions.jpg">
+<video controls playsinline preload="none" poster="/assets/videos/demo-settings-permissions.jpg">
   <source src="/assets/videos/demo-settings-permissions.webm" type="video/webm">
 </video>
 

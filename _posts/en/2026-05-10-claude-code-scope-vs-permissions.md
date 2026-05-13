@@ -57,7 +57,7 @@ These layers stack. A `deny` rule always wins, so a project-level deny overrides
 
 `allow` runs without prompting. `deny` is hard-blocked. Anything not matched falls into the default flow (Claude asks).
 
-<video controls playsinline poster="/assets/videos/demo-settings-permissions.jpg">
+<video controls playsinline preload="none" poster="/assets/videos/demo-settings-permissions.jpg">
   <source src="/assets/videos/demo-settings-permissions.webm" type="video/webm">
 </video>
 
