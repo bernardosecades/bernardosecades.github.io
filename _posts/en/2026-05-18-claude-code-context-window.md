@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: keeping the context window healthy"
-date: 2026-05-17 00:00:00
+date: 2026-05-18 00:00:00
 lang: en
 ref: claude-code-context-window
 tags: [claude-code, context, workflow]

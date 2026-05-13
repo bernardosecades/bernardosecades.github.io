@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: /goal — set the finish line, not each step"
-date: 2026-05-19 00:00:00
+date: 2026-05-20 00:00:00
 lang: en
 ref: claude-code-goal
 tags: [claude-code, goal, automation, workflow]

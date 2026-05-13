@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: cómo no quedarme sin ventana de contexto"
-date: 2026-05-17 00:00:00
+date: 2026-05-18 00:00:00
 lang: es
 ref: claude-code-context-window
 tags: [claude-code, context, workflow]

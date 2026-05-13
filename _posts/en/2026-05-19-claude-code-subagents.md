@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: subagents have their own context window"
-date: 2026-05-18 00:00:00
+date: 2026-05-19 00:00:00
 lang: en
 ref: claude-code-subagents
 tags: [claude-code, subagents, context, workflow]
