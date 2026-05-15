@@ -42,3 +42,4 @@ exclude:
   - CLAUDE.md
   - bernie_next_posts.md
   - .claude/
+  - _buttondown/
