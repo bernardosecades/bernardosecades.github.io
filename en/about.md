@@ -90,6 +90,13 @@ about_ref: true
           <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/d9ih84sgvups" target="_blank" rel="noopener">Verify ↗</a></span>
         </div>
       </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/m7awsup6jyuv" target="_blank" rel="noopener">Introduction to Claude Cowork</a>
+          <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/m7awsup6jyuv" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
     </ul>
   </section>
 
