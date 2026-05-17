@@ -70,3 +70,23 @@ gst-launch-1.0 -q filesrc location=assets/videos/demo-foo.webm ! decodebin ! vid
   ! multifilesink location=assets/videos/demo-foo.jpg max-files=1 next-file=buffer
 gst-discoverer-1.0 assets/videos/demo-foo.webm | grep -E 'Duration|Width|Height'
 ```
+
+### Previewing a post in production (unlisted)
+
+GitHub Pages doesn't accept build flags or env vars, so there's no `?preview=1`. The workaround is an `unlisted: true` frontmatter flag: the post is built and reachable at its real URL (shareable), but hidden from listings, sitemap, RSS, the EN/ES switcher on its sibling, and search engines.
+
+1. The post `date:` can be future-dated: `future: true` is enabled in `_config.yml`, so future-dated posts ARE built. ⚠️ Side effect: any future-dated post **without** `unlisted: true` will be visible in production. Always pair a future date with `unlisted: true` until you mean to launch.
+2. Add to the frontmatter:
+   ```yaml
+   unlisted: true
+   sitemap: false
+   ```
+3. `git push origin main`. The URL `/en/<slug>/` (or `/es/<slug>/`) serves the post; nothing public references it.
+4. To officially launch: remove both lines (and adjust the date if needed) and push again.
+
+Where the `unlisted` flag is honored:
+- `_layouts/home.html` — filters the per-language listing and "featured" lookup.
+- `_layouts/post.html` — filters "Suggested next" / "Sigue leyendo".
+- `_layouts/default.html` — switcher EN↔ES skips unlisted matches, emits `<meta name="robots" content="noindex,nofollow">`, and suppresses Article/Breadcrumb/Video JSON-LD.
+- `feed.xml` (root) — custom Atom feed overriding `jekyll-feed`, filters unlisted out.
+- `sitemap: false` — handled natively by `jekyll-sitemap`.

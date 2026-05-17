@@ -15,6 +15,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Build future-dated posts so they can be previewed via the `unlisted: true`
+# frontmatter flag (see CLAUDE.md "Previewing a post in production (unlisted)").
+future: true
+
 markdown: kramdown
 highlighter: rouge
 kramdown:

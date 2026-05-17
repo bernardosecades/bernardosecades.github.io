@@ -29,7 +29,7 @@ layout: default
 {%- assign all_lang_posts = site.posts | where: "lang", cur_lang -%}
 {%- assign other_posts = '' | split: '' -%}
 {%- for p in all_lang_posts -%}
-  {%- if p.url != page.url -%}
+  {%- if p.url != page.url and p.unlisted != true -%}
     {%- assign other_posts = other_posts | push: p -%}
   {%- endif -%}
 {%- endfor -%}

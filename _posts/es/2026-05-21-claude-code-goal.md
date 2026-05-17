@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: /goal — describe la meta, no cada paso"
-date: 2026-05-20 00:00:00
+date: 2026-05-21 00:00:00
 lang: es
 ref: claude-code-goal
 tags: [claude-code, goal, automation, workflow]

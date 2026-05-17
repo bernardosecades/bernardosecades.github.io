@@ -12,6 +12,8 @@ video:
   duration: PT2M5S
   width: 1917
   height: 1038
+unlisted: true
+sitemap: false
 ---
 
 El [post anterior sobre la ventana de contexto](/claude-code-ventana-contexto/) nombró a los subagentes como uno de los cuatro hábitos: *"tiene su propia ventana, devuelve un resumen"*. La mayoría de la gente con la que hablo asiente y luego sigue tratándolos como si fueran una segunda pestaña de la misma conversación — la misma memoria, los mismos archivos, los mismos apuntes. No lo son.

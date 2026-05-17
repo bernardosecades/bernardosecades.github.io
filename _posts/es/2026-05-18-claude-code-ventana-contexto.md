@@ -6,6 +6,8 @@ ref: claude-code-context-window
 tags: [claude-code, context, workflow]
 read_min: 4
 excerpt_text: "La ventana de contexto es un recurso limitado. Cuatro hábitos que uso a diario para mantenerla sana: /clear y /compact, subagentes, @path y plan mode."
+unlisted: true
+sitemap: false
 ---
 
 La ventana de contexto de Claude Code es finita. Cada mensaje, cada tool call, cada fichero leído ocupa un trozo de ella. Cuando se llena demasiado pasan dos cosas: el modelo empieza a olvidar lo del principio de la sesión, y los costes por turno se disparan porque procesar 200k tokens cada vez no sale gratis.
@@ -21,10 +23,6 @@ Tres herramientas para liberar contexto, pensadas para situaciones distintas.
 `/compact` pide al modelo que resuma el contexto y conserva sólo ese resumen. Útil cuando llevo una hora trabajando, los 12 ficheros que leí al principio ya no aportan, pero sí quiero conservar las decisiones que tomamos por el camino.
 
 El auto-compact se dispara solo cuando rozas el ~95% de la ventana. Funciona, pero te puede pillar a mitad de tarea: el resumen automático puede perder matices que estabas a punto de usar. Si veo el indicador subiendo del 70% y la tarea aún no está cerrada, lanzo `/compact` antes de que el modelo decida por mí.
-
-<video controls playsinline>
-  <source src="/assets/videos/demo-context-window.webm" type="video/webm">
-</video>
 
 ## Subagentes para no contaminar la sesión principal
 

@@ -1,7 +1,7 @@
 {%- comment -%} Compute EN/ES URLs for translations (used by <head> hreflang and <body> language toggle). {%- endcomment -%}
 {%- if page.ref -%}
-  {%- assign en_match = site.posts | where: "ref", page.ref | where: "lang", "en" | first -%}
-  {%- assign es_match = site.posts | where: "ref", page.ref | where: "lang", "es" | first -%}
+  {%- assign en_match = site.posts | where: "ref", page.ref | where: "lang", "en" | where_exp: "p", "p.unlisted != true" | first -%}
+  {%- assign es_match = site.posts | where: "ref", page.ref | where: "lang", "es" | where_exp: "p", "p.unlisted != true" | first -%}
   {%- if en_match -%}{%- assign en_url = en_match.url -%}{%- else -%}{%- assign en_url = '/en/' -%}{%- endif -%}
   {%- if es_match -%}{%- assign es_url = es_match.url -%}{%- else -%}{%- assign es_url = '/es/' -%}{%- endif -%}
 {%- elsif page.about_ref -%}
@@ -20,6 +20,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  {% if page.unlisted %}<meta name="robots" content="noindex,nofollow">{% endif %}
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% elsif page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html | truncate: 180 }}">{% endif %}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,13 +58,13 @@
 
   {% include seo/organization.html %}
   {% include seo/website.html %}
-  {% if page.layout == "post" %}
+  {% if page.layout == "post" %}{% unless page.unlisted %}
     {% include seo/article.html %}
     {% include seo/breadcrumb.html %}
     {% if page.video and page.video.src and page.video.thumbnail %}
       {% include seo/video.html %}
     {% endif %}
-  {% endif %}
+  {% endunless %}{% endif %}
 </head>
 <body>
   {%- assign cur_lang = page.lang | default: 'en' -%}

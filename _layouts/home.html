@@ -32,7 +32,7 @@ layout: default
   {%- assign t_nl_privacy_url = '/en/privacy/' -%}
 {%- endif -%}
 
-{%- assign posts = site.posts | where: "lang", cur_lang | sort: 'date' | reverse -%}
+{%- assign posts = site.posts | where: "lang", cur_lang | where_exp: "p", "p.unlisted != true" | sort: 'date' | reverse -%}
 
 <div class="container">
   <section class="home-hero">

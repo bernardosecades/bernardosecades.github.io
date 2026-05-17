@@ -12,6 +12,8 @@ video:
   duration: PT2M5S
   width: 1917
   height: 1038
+unlisted: true
+sitemap: false
 ---
 
 The [previous post on the context window](/claude-code-context-window/) name-dropped subagents as one of the four habits: *"it has its own window, it returns a summary"*. Most people I talk to nod and keep treating subagents as a second tab on the same conversation — same memory, same files, same notes. They are not.
