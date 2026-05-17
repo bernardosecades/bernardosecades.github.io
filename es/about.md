@@ -18,7 +18,7 @@ about_ref: true
   </div>
 
   <section class="about-certs" aria-labelledby="certs-heading">
-    <h2 id="certs-heading" class="about-certs-title">Certificaciones</h2>
+    <h2 id="certs-heading" class="about-certs-title">Certificaciones (13)</h2>
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-badge" aria-hidden="true">A</span>
@@ -102,6 +102,13 @@ about_ref: true
         <div class="cert-meta">
           <a class="cert-title" href="https://verify.skilljar.com/c/bqnq2nedqrok" target="_blank" rel="noopener">AI Capabilities and Limitations</a>
           <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/bqnq2nedqrok" target="_blank" rel="noopener">Verificar ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/mzks2rtjcbug" target="_blank" rel="noopener">Teaching AI Fluency</a>
+          <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/mzks2rtjcbug" target="_blank" rel="noopener">Verificar ↗</a></span>
         </div>
       </li>
     </ul>
