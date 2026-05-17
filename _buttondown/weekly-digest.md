@@ -22,9 +22,9 @@
 
 Hola,
 
-Esto es lo nuevo esta semana en [AI Tips & Tricks](https://claudecodesessions.com/es/):
+Esto es lo nuevo esta semana en [AI Tips & Tricks](https://claudecodesessions.com/):
 
-### [POST_1_TITULO_ES](https://claudecodesessions.com/es/POST_1_SLUG_ES/)
+### [POST_1_TITULO_ES](https://claudecodesessions.com/POST_1_SLUG_ES/)
 
 POST_1_EXCERPT_ES
 
@@ -32,7 +32,7 @@ POST_1_EXCERPT_ES
 
 ---
 
-### [POST_2_TITULO_ES](https://claudecodesessions.com/es/POST_2_SLUG_ES/)
+### [POST_2_TITULO_ES](https://claudecodesessions.com/POST_2_SLUG_ES/)
 
 POST_2_EXCERPT_ES
 
@@ -40,7 +40,7 @@ POST_2_EXCERPT_ES
 
 ---
 
-### [POST_3_TITULO_ES](https://claudecodesessions.com/es/POST_3_SLUG_ES/)
+### [POST_3_TITULO_ES](https://claudecodesessions.com/POST_3_SLUG_ES/)
 
 POST_3_EXCERPT_ES
 
@@ -52,9 +52,9 @@ POST_3_EXCERPT_ES
 
 Hi,
 
-Here's what's new this week on [AI Tips & Tricks](https://claudecodesessions.com/en/):
+Here's what's new this week on [AI Tips & Tricks](https://claudecodesessions.com/):
 
-### [POST_1_TITLE_EN](https://claudecodesessions.com/en/POST_1_SLUG_EN/)
+### [POST_1_TITLE_EN](https://claudecodesessions.com/POST_1_SLUG_EN/)
 
 POST_1_EXCERPT_EN
 
@@ -62,7 +62,7 @@ POST_1_EXCERPT_EN
 
 ---
 
-### [POST_2_TITLE_EN](https://claudecodesessions.com/en/POST_2_SLUG_EN/)
+### [POST_2_TITLE_EN](https://claudecodesessions.com/POST_2_SLUG_EN/)
 
 POST_2_EXCERPT_EN
 
@@ -70,7 +70,7 @@ POST_2_EXCERPT_EN
 
 ---
 
-### [POST_3_TITLE_EN](https://claudecodesessions.com/en/POST_3_SLUG_EN/)
+### [POST_3_TITLE_EN](https://claudecodesessions.com/POST_3_SLUG_EN/)
 
 POST_3_EXCERPT_EN
 

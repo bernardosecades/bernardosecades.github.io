@@ -6,8 +6,6 @@ ref: claude-code-context-window
 tags: [claude-code, context, workflow]
 read_min: 4
 excerpt_text: "The context window is a limited resource. Four habits I use daily to keep it healthy: /clear and /compact, subagents, @path, and plan mode."
-unlisted: true
-sitemap: false
 ---
 
 The Claude Code context window is finite. Every message, every tool call, every file read takes a slice of it. When it fills up, two things happen: the model starts forgetting what was said early in the session, and per-turn costs jump because processing 200k tokens each round isn't free.

@@ -6,8 +6,6 @@ ref: claude-code-goal
 tags: [claude-code, goal, automation, workflow]
 read_min: 4
 excerpt_text: "Describe the end state once and walk away. /goal turns prompt-after-prompt iteration into a single condition Claude works toward until it's met."
-#unlisted: true
-#sitemap: false
 ---
 
 The [previous post on subagents](/claude-code-subagents/) was about offloading exploration to a separate context. This one is about something different: how to stop typing *"keep going"*, *"now fix the next one"*, *"run the tests again"* after every turn.

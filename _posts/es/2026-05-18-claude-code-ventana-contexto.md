@@ -6,8 +6,6 @@ ref: claude-code-context-window
 tags: [claude-code, context, workflow]
 read_min: 4
 excerpt_text: "La ventana de contexto es un recurso limitado. Cuatro hábitos que uso a diario para mantenerla sana: /clear y /compact, subagentes, @path y plan mode."
-unlisted: true
-sitemap: false
 ---
 
 La ventana de contexto de Claude Code es finita. Cada mensaje, cada tool call, cada fichero leído ocupa un trozo de ella. Cuando se llena demasiado pasan dos cosas: el modelo empieza a olvidar lo del principio de la sesión, y los costes por turno se disparan porque procesar 200k tokens cada vez no sale gratis.

@@ -6,8 +6,6 @@ ref: claude-code-goal
 tags: [claude-code, goal, automation, workflow]
 read_min: 4
 excerpt_text: "Describes el estado final una vez y te vas. /goal convierte el prompt-a-prompt en una sola condición que Claude persigue hasta cumplirla."
-#unlisted: true
-#sitemap: false
 ---
 
 El [post anterior sobre los subagentes](/claude-code-subagentes/) iba sobre delegar la exploración a otro contexto. Este va sobre algo distinto: cómo dejar de teclear *"sigue"*, *"ahora arregla el siguiente"*, *"corre los tests otra vez"* después de cada turno.
