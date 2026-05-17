@@ -17,7 +17,7 @@ plugins:
 
 # Build future-dated posts so they can be previewed via the `unlisted: true`
 # frontmatter flag (see CLAUDE.md "Previewing a post in production (unlisted)").
-future: true
+# future: true
 
 markdown: kramdown
 highlighter: rouge
