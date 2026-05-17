@@ -7,6 +7,9 @@
       líneas de comentario, aunque Jinja {# … #} también las elimina).
    2. Subject line (también puede llevar Jinja):
         {% if subscriber.metadata.lang == "es" %}Esta semana en AI Tips & Tricks{% else %}This week in AI Tips & Tricks{% endif %}
+
+      Alternativa genérica (sin referencia a la marca):
+        {% if subscriber.metadata.lang == "es" %}Tu dosis semanal de IA ✨{% else %}This week in AI tips ✨{% endif %}
    3. Rellena los bloques POST_N con los posts de esta semana.
       Si solo hay un post, borra los bloques sobrantes.
    4. Cada subscriber debe tener metadata.lang = "es" o "en".
