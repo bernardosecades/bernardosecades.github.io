@@ -18,7 +18,7 @@ about_ref: true
   </div>
 
   <section class="about-certs" aria-labelledby="certs-heading">
-    <h2 id="certs-heading" class="about-certs-title">Certifications (14)</h2>
+    <h2 id="certs-heading" class="about-certs-title">Certifications (15)</h2>
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-badge" aria-hidden="true">A</span>
@@ -116,6 +116,13 @@ about_ref: true
         <div class="cert-meta">
           <a class="cert-title" href="https://verify.skilljar.com/c/f5ofn8sm4whf" target="_blank" rel="noopener">AI Fluency: Framework & Foundations</a>
           <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/f5ofn8sm4whf" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/6eb4im8h9232" target="_blank" rel="noopener">AI Fluency for Small Businesses</a>
+          <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/6eb4im8h9232" target="_blank" rel="noopener">Verify ↗</a></span>
         </div>
       </li>
     </ul>
