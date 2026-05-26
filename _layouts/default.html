@@ -7,6 +7,9 @@
 {%- elsif page.about_ref -%}
   {%- assign en_url = '/en/about/' -%}
   {%- assign es_url = '/es/about/' -%}
+{%- elsif page.systems_ref -%}
+  {%- assign en_url = '/en/systems/' -%}
+  {%- assign es_url = '/es/systems/' -%}
 {%- elsif page.privacy_ref -%}
   {%- assign en_url = '/en/privacy/' -%}
   {%- assign es_url = '/es/privacy/' -%}
@@ -71,14 +74,18 @@
   {%- if cur_lang == 'es' -%}
     {%- assign t_home = 'Inicio' -%}
     {%- assign t_about = 'Sobre mí' -%}
+    {%- assign t_systems = 'Sistemas' -%}
     {%- assign about_url = '/es/about/' -%}
+    {%- assign systems_url = '/es/systems/' -%}
     {%- assign home_url = '/es/' -%}
     {%- assign t_privacy = 'Política de privacidad' -%}
     {%- assign privacy_url = '/es/privacy/' -%}
   {%- else -%}
     {%- assign t_home = 'Home' -%}
     {%- assign t_about = 'About' -%}
+    {%- assign t_systems = 'Systems' -%}
     {%- assign about_url = '/en/about/' -%}
+    {%- assign systems_url = '/en/systems/' -%}
     {%- assign home_url = '/en/' -%}
     {%- assign t_privacy = 'Privacy Policy' -%}
     {%- assign privacy_url = '/en/privacy/' -%}
@@ -92,6 +99,7 @@
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="{{ home_url | relative_url }}" class="nav-link{% if page.nav == 'home' %} active{% endif %}">{{ t_home }}</a>
+        <a href="{{ systems_url | relative_url }}" class="nav-link{% if page.nav == 'systems' %} active{% endif %}">{{ t_systems }}</a>
         <a href="{{ about_url | relative_url }}" class="nav-link{% if page.nav == 'about' %} active{% endif %}">{{ t_about }}</a>
         <span class="nav-divider"></span>
         <span class="lang-toggle" role="group" aria-label="Language">
