@@ -1,6 +1,6 @@
 ---
 title: "Claude Code: reglas de permisos — wildcards, allow/deny, prioridad y plugins"
-date: 2026-06-02 00:00:00
+date: 2026-06-03 00:00:00
 lang: es
 ref: claude-code-permission-tuning
 tags: [claude-code, permissions, settings, plugins, workflow]

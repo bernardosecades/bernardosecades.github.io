@@ -1,6 +1,6 @@
 ---
-title: "Cómo un marketplace por equipos acabó con la duplicación de skills en Claude"
-date: 2026-05-25 00:00:00
+title: "Un marketplace de plugins por equipo: fin de las skills duplicadas en Claude"
+date: 2026-05-27 00:00:00
 lang: es
 ref: claude-code-team-marketplace
 tags: [claude-code, plugins, marketplace, workflow]

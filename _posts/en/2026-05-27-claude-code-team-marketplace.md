@@ -1,6 +1,6 @@
 ---
 title: "How a per-team plugin marketplace stopped Claude skill duplication across teams"
-date: 2026-05-25 00:00:00
+date: 2026-05-27 00:00:00
 lang: en
 ref: claude-code-team-marketplace
 tags: [claude-code, plugins, marketplace, workflow]
