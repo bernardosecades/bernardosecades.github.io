@@ -18,7 +18,7 @@ about_ref: true
   </div>
 
   <section class="about-certs" aria-labelledby="certs-heading">
-    <h2 id="certs-heading" class="about-certs-title">Certificaciones (15)</h2>
+    <h2 id="certs-heading" class="about-certs-title">Certificaciones (16)</h2>
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-badge" aria-hidden="true">A</span>
@@ -123,6 +123,13 @@ about_ref: true
         <div class="cert-meta">
           <a class="cert-title" href="https://verify.skilljar.com/c/6eb4im8h9232" target="_blank" rel="noopener">AI Fluency for Small Businesses</a>
           <span class="cert-sub">Anthropic · May 2026 · <a href="https://verify.skilljar.com/c/6eb4im8h9232" target="_blank" rel="noopener">Verificar ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/b3b4xm8nfb5p" target="_blank" rel="noopener">Building with the Claude API</a>
+          <span class="cert-sub">Anthropic · Jun 2026 · <a href="https://verify.skilljar.com/c/b3b4xm8nfb5p" target="_blank" rel="noopener">Verificar ↗</a></span>
         </div>
       </li>
     </ul>
