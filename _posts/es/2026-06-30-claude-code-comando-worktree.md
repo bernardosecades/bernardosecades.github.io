@@ -21,7 +21,7 @@ Esa es la forma del trabajo que merece convertirse en comando: corto, repetitivo
 Lo que no hace — a propósito, porque no puede conocer tu stack — es el bootstrap específico de tu equipo:
 
 - **Abrir tu IDE en el worktree.** Una sesión de terminal no es donde leo código Go; GoLand sí.
-- **Tu propia convención de rama y ruta.** Quiero `feature/ORD-2231` y una carpeta `.trees/`, no `worktree-ORD-2231` bajo `.claude/`.
+- **Tu propia convención de rama y ruta.** Quiero la rama llamada `ORD-2231`, a secas, y una carpeta `.trees/` — no `worktree-ORD-2231` bajo `.claude/`.
 - **Copiar la config ignorada por git que el servicio necesita para arrancar.** El `.env` que no viaja con el worktree.
 
 Nada de eso es difícil. Son tres comandos que prefiero no reteclear — así que los codifico una vez.
@@ -41,8 +41,8 @@ Crea un git worktree para el ticket `$1`, prepáralo para Go y ábrelo en GoLand
 
 Pasos:
 1. Si `.trees/$1` ya existe, para y dímelo — no lo recrees.
-2. Crea el worktree en una rama nueva `feature/$1` desde `origin/main`:
-   git worktree add -b feature/$1 .trees/$1 origin/main
+2. Crea el worktree en una rama nueva `$1` desde `origin/main`:
+   git worktree add -b $1 .trees/$1 origin/main
 3. Copia la config local ignorada por git que el servicio necesita (`.env`, `.env.local`)
    desde la raíz del repo a `.trees/$1`. El module cache de Go es global, así que no hay
    nada más que enlazar.
@@ -54,13 +54,11 @@ Guárdalo como `.claude/commands/worktree.md` y se convierte en `/worktree <TICK
 
 Fíjate en el paso 1: esto es un *prompt*, no un script de shell, así que basta con decirle "si el worktree existe, para". Claude lo comprueba y aborta con un mensaje claro en vez de pelearse con el `fatal: ... already used by worktree` de git.
 
-## Adaptar la receta de Python a Go
+## Por qué el setup de Go es tan corto
 
-La versión de este comando que circula usa Python y VS Code, y su paso clave es **hacer symlink de `.venv`** dentro del worktree nuevo para no reinstalar cada dependencia, y luego lanzar `code`. Tradúcelo literal a Go y te pondrías a buscar el equivalente de `.venv` que enlazar.
+Las dependencias son un no-problema. El module cache de Go es **global** (`$GOPATH/pkg/mod`, con los builds cacheados en `$GOCACHE`): todos los worktrees de la máquina ya lo comparten, así que el primer `go build` en un worktree nuevo resuelve desde la caché, no desde la red. No hay nada que copiar ni nada que enlazar — el worktree compila desde el momento en que git lo crea.
 
-No lo hay — y ahí está la gracia. El module cache de Go es **global** (`$GOPATH/pkg/mod`, con los builds cacheados en `$GOCACHE`). Todos los worktrees de la máquina ya lo comparten; el primer `go build` en un worktree nuevo resuelve desde la caché, no desde la red. Así que el paso del symlink no se traduce — simplemente *desaparece*. El comando de Go es más corto que el de Python.
-
-Lo que sí hay que tratar es lo único que el post anterior marcaba como Gotcha 1: los ficheros que git ignora pero el servicio necesita para arrancar. En Go eso es casi siempre el `.env`. Así que el paso 3 no es un symlink, es una copia — el único paso manual que, olvidado, hace que el servicio muera al arrancar. Y `code` pasa a ser `goland`: JetBrains trae un launcher de línea de comandos, así que `goland .trees/ORD-2231` abre ese directorio en una ventana nueva.
+Lo que sí hay que tratar es lo único que el post anterior marcaba como Gotcha 1: los ficheros que git ignora pero el servicio necesita para arrancar. En un servicio Go eso es casi siempre el `.env`. Así que el paso 3 es una copia y punto — el único paso manual que, olvidado, hace que el servicio muera al arrancar. Y el paso 4 funciona porque JetBrains trae un launcher de línea de comandos: `goland .trees/ORD-2231` abre ese directorio en una ventana nueva de GoLand.
 
 ## En marcha
 
@@ -70,11 +68,11 @@ Desde cualquier sesión en el repo:
 > /worktree ORD-2287
 
 ✓ .trees/ORD-2287 todavía no existe
-✓ git worktree add -b feature/ORD-2287 .trees/ORD-2287 origin/main
+✓ git worktree add -b ORD-2287 .trees/ORD-2287 origin/main
 ✓ copiado .env → .trees/ORD-2287/.env
 ✓ goland .trees/ORD-2287   (abriendo…)
 
-Rama feature/ORD-2287 lista en .trees/ORD-2287.
+Rama ORD-2287 lista en .trees/ORD-2287.
 Ojo: los puertos y la DB local siguen compartidos con tus otros worktrees.
 ```
 
@@ -89,8 +87,8 @@ Una línea de entrada, una rama nombrada con el ticket, un checkout que arranca 
 ## Decisiones
 
 - **`-w` para el terminal rápido, `/worktree` para el flujo de IDE.** El integrado sigue siendo el default; el comando es el 20% específico del equipo que no puede cubrir.
-- **Rama `feature/<ticket>`, ruta `.trees/`.** Mis convenciones, no el `worktree-<nombre>` bajo `.claude/` del integrado. `.trees/` va al `.gitignore`.
-- **Copiar `.env`, no hacer symlink de nada.** El module cache global de Go significa que no hay análogo de `.venv` que enlazar — lo único que arrastrar es la config ignorada por git.
+- **Rama llamada `<ticket>`, ruta `.trees/`.** Mis convenciones, no el `worktree-<nombre>` bajo `.claude/` del integrado. El ID del ticket a secas ya es único y ya nombra la sesión — no hace falta prefijo `feature/`. `.trees/` va al `.gitignore`.
+- **Copiar `.env`, no hacer symlink de nada.** El module cache global de Go significa que las dependencias ya se comparten entre worktrees — lo único que arrastrar es la config ignorada por git.
 
 ## Limitaciones
 
