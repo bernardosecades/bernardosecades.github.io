@@ -18,7 +18,7 @@ about_ref: true
   </div>
 
   <section class="about-certs" aria-labelledby="certs-heading">
-    <h2 id="certs-heading" class="about-certs-title">Certificaciones (17)</h2>
+    <h2 id="certs-heading" class="about-certs-title">Certificaciones (18)</h2>
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-badge" aria-hidden="true">A</span>
@@ -137,6 +137,13 @@ about_ref: true
         <div class="cert-meta">
           <a class="cert-title" href="https://verify.skilljar.com/c/569vpbp8dod3" target="_blank" rel="noopener">Claude with Amazon Bedrock</a>
           <span class="cert-sub">Anthropic · Jun 2026 · <a href="https://verify.skilljar.com/c/569vpbp8dod3" target="_blank" rel="noopener">Verificar ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/2ienkt4jhsxb" target="_blank" rel="noopener">Claude with Google Cloud's Vertex AI</a>
+          <span class="cert-sub">Anthropic · Jun 2026 · <a href="https://verify.skilljar.com/c/2ienkt4jhsxb" target="_blank" rel="noopener">Verificar ↗</a></span>
         </div>
       </li>
     </ul>
