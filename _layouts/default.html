@@ -17,6 +17,31 @@
   {%- assign en_url = '/en/' -%}
   {%- assign es_url = '/es/' -%}
 {%- endif -%}
+{%- comment -%} Resolve SEO/social fields once; reuse for <meta>, Open Graph and Twitter. {%- endcomment -%}
+{%- assign cur_lang = page.lang | default: 'en' -%}
+{%- if page.description -%}
+  {%- assign seo_description = page.description -%}
+{%- elsif page.excerpt_text -%}
+  {%- assign seo_description = page.excerpt_text -%}
+{%- elsif page.excerpt -%}
+  {%- assign seo_description = page.excerpt -%}
+{%- else -%}
+  {%- assign seo_description = site.description -%}
+{%- endif -%}
+{%- assign seo_description = seo_description | strip_html | normalize_whitespace -%}
+{%- assign seo_title = page.title | default: site.title -%}
+{%- if page.video and page.video.thumbnail -%}
+  {%- assign seo_image = page.video.thumbnail | absolute_url -%}
+{%- else -%}
+  {%- assign seo_image = '/assets/img/logo.png' | absolute_url -%}
+{%- endif -%}
+{%- if cur_lang == 'es' -%}
+  {%- assign og_locale = 'es_ES' -%}
+  {%- assign og_locale_alt = 'en_US' -%}
+{%- else -%}
+  {%- assign og_locale = 'en_US' -%}
+  {%- assign og_locale_alt = 'es_ES' -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}" data-theme="light">
 <head>
@@ -24,7 +49,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   {% if page.unlisted %}<meta name="robots" content="noindex,nofollow">{% endif %}
-  {% if page.description %}<meta name="description" content="{{ page.description }}">{% elsif page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html | truncate: 180 }}">{% endif %}
+  {% if seo_description %}<meta name="description" content="{{ seo_description | truncate: 160 }}">{% endif %}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +61,27 @@
   <link rel="alternate" hreflang="es" href="{{ site.url }}{{ es_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ en_url }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  {%- comment -%} Open Graph + Twitter Card — social share previews (LinkedIn, Slack, X, WhatsApp). {%- endcomment -%}
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ seo_title }}">
+  {% if seo_description %}<meta property="og:description" content="{{ seo_description | truncate: 200 }}">{% endif %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ seo_image }}">
+  <meta property="og:image:alt" content="{{ seo_title }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:locale:alternate" content="{{ og_locale_alt }}">
+  {%- if page.layout == "post" %}{% unless page.unlisted %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="{{ '/' | append: cur_lang | append: '/about/' | absolute_url }}">
+  {% for tag in page.tags %}<meta property="article:tag" content="{{ tag }}">
+  {% endfor %}{% endunless %}{%- endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ seo_title }}">
+  {% if seo_description %}<meta name="twitter:description" content="{{ seo_description | truncate: 200 }}">{% endif %}
+  <meta name="twitter:image" content="{{ seo_image }}">
 
   {% comment %} Apply persisted theme before paint to avoid flash. {% endcomment %}
   <script>

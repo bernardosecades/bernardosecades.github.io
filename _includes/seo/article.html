@@ -20,8 +20,10 @@
     "url": "{{ '/' | append: post_lang | append: '/about/' | absolute_url }}"
   },
   "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
-  {%- if page.video and page.video.thumbnail %}
+  {%- if page.video and page.video.thumbnail -%}
   "image": ["{{ page.video.thumbnail | absolute_url }}"],
+  {%- else -%}
+  "image": ["{{ '/assets/img/logo.png' | absolute_url }}"],
   {%- endif %}
   "keywords": {{ page.tags | join: ", " | jsonify }}
 }
