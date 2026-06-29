@@ -1,7 +1,7 @@
 ---
 layout: home
-title: "Claude Code in the real world"
-description: "Learn to use Claude Code on real projects: multi-repo, debugging, workflows, and prompts I use every day."
+title: "AI in real engineering work"
+description: "How I use AI as a backend engineer on real systems: debugging, code review, model choice, design, agentic workflows — and the Claude Code tricks I lean on every day."
 permalink: /en/
 lang: en
 nav: home
