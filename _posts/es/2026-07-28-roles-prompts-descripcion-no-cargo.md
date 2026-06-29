@@ -5,12 +5,12 @@ lang: es
 ref: prompt-roles
 tags: [prompting, claude, subagents, workflow]
 read_min: 4
-excerpt_text: "\"Eres un experto senior\" apenas mueve a un modelo moderno: es una pegatina de credencial, no una instrucción. Un rol gana su sitio cuando codifica comportamiento, restricciones y audiencia: qué hacer, qué no hacer y para quién escribes."
+excerpt_text: "\"Eres un experto senior\" apenas mueve a un modelo moderno: es una credencial decorativa, no una instrucción. Un rol gana su sitio cuando codifica comportamiento, restricciones y audiencia: qué hacer, qué no hacer y para quién escribes."
 ---
 
 Durante un tiempo abría los prompts con el conjuro de aspecto responsable: *"Eres un ingeniero senior con 20 años de experiencia. Refactoriza esta función."* Sentía que estaba preparando al modelo para dar lo mejor de sí. La respuesta llegaba limpia, segura — y no mejor que cuando borraba esa primera frase del todo.
 
-Esa frase no era una instrucción. Era una pegatina de credencial. Y el modelo no se vuelve más capaz porque yo le diga que lo es.
+Esa frase no era una instrucción. Era una credencial decorativa: un título que adorna pero no manda. Y el modelo no se vuelve más capaz porque yo le diga que lo es.
 
 ## Por qué el cargo apenas suma
 
@@ -33,7 +33,7 @@ You are a code reviewer. You did not write this code and you have
 no stake in it. Your job is to find problems, not to approve.
 ```
 
-La palabra "reviewer" no es lo que hace el trabajo. El trabajo está en el resto: una postura (*no stake*), un comportamiento (*find problems*) y un anti-objetivo explícito (*not to approve*). Recórtalo a solo "Eres un revisor senior" y vuelves a la pegatina.
+La palabra "reviewer" no es lo que hace el trabajo. El trabajo está en el resto: una postura (*no stake*), un comportamiento (*find problems*) y un anti-objetivo explícito (*not to approve*). Quita esas tres líneas y deja solo "Eres un revisor senior": vuelves a una credencial decorativa, un título sin instrucciones detrás.
 
 ## Malo vs bueno
 
