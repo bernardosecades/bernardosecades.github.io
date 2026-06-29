@@ -48,6 +48,7 @@ To decide between continuing and starting fresh:
 
 - **New task, same project** → `/clear`. Keep CLAUDE.md and the local setup, drop the conversation.
 - **Want to explore an alternative without losing the current state** → [fork the session](/claude-code-fork-session/). Two branches in parallel.
+- **Claude went down the wrong path this session** → [rewind to an earlier point](/claude-code-sessions-rewind/). Undoes the messages *and* the file edits since then, no manual cleanup.
 - **Completely different task** → new session from scratch.
 
 Starting clean has way less friction than fighting a bloated session.

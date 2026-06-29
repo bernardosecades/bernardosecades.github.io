@@ -1,11 +1,11 @@
 ---
-title: "Claude Code: nombra una sesión y bifúrcala para probar otro camino"
+title: "Claude Code: bifurca una sesión para probar otro enfoque"
 date: 2026-05-04 00:00:00
 lang: es
 ref: claude-code-fork-session
 tags: [claude-code, workflow]
 read_min: 2
-excerpt_text: "Renombra una sesión de Claude Code con /rename y luego bifúrcala en una copia independiente para probar otro enfoque sin perder la original."
+excerpt_text: "Bifurca una sesión de Claude Code con --fork-session: una copia independiente para probar un cambio arriesgado sin tocar el hilo original."
 ---
 
 Un pequeño flujo de dos pasos que uso cuando quiero probar otro enfoque en una sesión sin perder el hilo original. La idea es muy parecida a un `git branch`: parto del mismo punto, pero en una rama aparte.
@@ -34,3 +34,5 @@ Esto copia el historial en una **nueva sesión** y te deja dentro de ella. La se
 
 - Trato una sesión con nombre como mi contexto principal de trabajo, y la bifurco cada vez que quiero explorar un camino lateral.
 - Si el camino lateral no cuaja, simplemente recupero la original y vuelvo a intentarlo desde un estado limpio.
+
+Bifurcar mantiene los dos hilos vivos en paralelo. Si lo único que necesitas es deshacer un mal paso *dentro* de una sesión, [rebobinar la conversación](/claude-code-sesiones-rewind/) es la herramienta más ligera.

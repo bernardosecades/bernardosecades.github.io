@@ -47,7 +47,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <title>{% if page.layout == "post" and page.title %}{{ page.title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   {% if page.unlisted %}<meta name="robots" content="noindex,nofollow">{% endif %}
   {% if seo_description %}<meta name="description" content="{{ seo_description | truncate: 160 }}">{% endif %}
 

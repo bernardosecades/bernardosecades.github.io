@@ -8,7 +8,7 @@ read_min: 4
 excerpt_text: "Claude toma notas sobre ti entre sesiones. Dónde viven, qué guarda, las dudas que siempre aparecen, y cómo verlas, podarlas y dirigirlas."
 ---
 
-El [post anterior sobre /goal](/claude-code-goal/) iba de estado **dentro** de una sesión — Claude iterando hasta que una condición se cumple. Este va de estado **entre** sesiones: el pequeño conjunto de notas que Claude escribe por su cuenta y recarga la próxima vez que abres el proyecto.
+El [post anterior sobre /goal](/claude-code-goal/) iba de estado **dentro** de una sesión — Claude iterando hasta que una condición se cumple. Este va de estado **entre** sesiones: el pequeño conjunto de notas que Claude escribe por su cuenta y recarga la próxima vez que [continúas o recuperas el proyecto](/claude-code-sesiones-rewind/).
 
 A la mayoría le sorprende que exista. Y luego les sorprende otra vez ver que son simples ficheros markdown en su propio disco.
 

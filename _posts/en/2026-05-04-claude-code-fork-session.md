@@ -1,11 +1,11 @@
 ---
-title: "Claude Code: name a session and fork it for an alternative path"
+title: "Claude Code: fork a session to try a different approach"
 date: 2026-05-04 00:00:00
 lang: en
 ref: claude-code-fork-session
 tags: [claude-code, workflow]
 read_min: 2
-excerpt_text: "Rename a Claude Code session with /rename, then fork it into an independent copy to try a different approach without losing the original."
+excerpt_text: "Fork a Claude Code session with --fork-session: branch into an independent copy to try a risky change without touching the original thread."
 ---
 
 A small two-step workflow I use whenever I want to try a different approach in a session without losing the original thread. The idea is very close to a `git branch`: same starting point, separate branch.
@@ -34,3 +34,5 @@ This copies the conversation history into a **new session** and drops you into i
 
 - I treat one named session as my main working context, and fork it whenever I want to explore a side path.
 - If the side path doesn't pan out, I just resume the original and try again from a clean state.
+
+Forking keeps both threads alive in parallel. If instead you only need to undo a wrong turn *within* one session, [rewinding the conversation](/claude-code-sessions-rewind/) is the lighter tool.

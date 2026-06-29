@@ -8,7 +8,7 @@ read_min: 4
 excerpt_text: "Claude keeps notes about you between sessions. Where they live, what gets saved, the doubts everyone has, and how to see, prune, and steer them."
 ---
 
-The [previous post on /goal](/claude-code-goal/) was about state **within** a session — Claude iterating until a condition is met. This one is about state **between** sessions: the small set of notes Claude writes on its own and reloads next time you open the project.
+The [previous post on /goal](/claude-code-goal/) was about state **within** a session — Claude iterating until a condition is met. This one is about state **between** sessions: the small set of notes Claude writes on its own and reloads next time you [continue or resume the project](/claude-code-sessions-rewind/).
 
 Most people are surprised it exists. Then surprised again when they realize it's just markdown files on their own disk.
 

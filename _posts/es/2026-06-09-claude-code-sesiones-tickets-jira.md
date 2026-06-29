@@ -56,6 +56,8 @@ Los detalles que lo hacen funcionar:
 - Cada entrada muestra la rama git, el tiempo desde la última actividad y el número de mensajes — la rama te confirma que vas a retomar lo que toca.
 - `Ctrl+A` amplía la búsqueda a todos los proyectos, `Ctrl+B` filtra por la rama git actual. Y `/resume` también funciona desde dentro de una sesión.
 
+¿Nuevo con estos comandos? Los [básicos de continuar, recuperar y rebobinar sesiones](/claude-code-sesiones-rewind/) cubren qué hacen `--continue`, `--resume` y `/rewind`; este post es la convención de nombres montada encima.
+
 ## Workflow 1: mergeado pero sin deployar
 
 Los deploys van por lotes; las tareas están "hechas" días antes de llegar a producción. Los bugs y las preguntas de QA llegan en asíncrono — siempre sobre la tarea en la que ya no estás.

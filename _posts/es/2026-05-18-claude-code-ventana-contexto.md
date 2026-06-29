@@ -48,6 +48,7 @@ Para decidir si seguir o arrancar de cero:
 
 - **Tarea nueva, mismo proyecto** → `/clear`. Conservo CLAUDE.md y el setup local, suelto la conversación.
 - **Quiero explorar una alternativa sin perder lo actual** → [bifurcar sesión](/claude-code-bifurcar-sesion/). Dos ramas en paralelo.
+- **Claude se ha ido por el camino equivocado en esta sesión** → [rebobinar a un punto anterior](/claude-code-sesiones-rewind/). Deshace los mensajes *y* las ediciones de ficheros desde ahí, sin limpiar a mano.
 - **Tarea completamente distinta** → sesión nueva desde cero, sin más.
 
 La fricción de empezar limpio es mucho menor que la de pelear con una sesión sobrecargada.

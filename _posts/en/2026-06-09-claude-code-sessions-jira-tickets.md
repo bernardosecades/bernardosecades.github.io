@@ -56,6 +56,8 @@ The details that make it work:
 - Each entry shows the git branch, time since last activity and message count — the branch name confirms you're about to resume the right thing.
 - `Ctrl+A` widens the search to all projects, `Ctrl+B` filters by the current git branch. And `/resume` works from inside a session too.
 
+New to these commands? The [continue, resume and rewind basics](/claude-code-sessions-rewind/) cover what `--continue`, `--resume` and `/rewind` actually do; this post is the naming convention layered on top.
+
 ## Workflow 1: merged but not deployed
 
 Deploys are batched; tasks are "done" days before they reach production. Bug reports and QA questions arrive asynchronously — always about the task you're no longer in.
