@@ -8,7 +8,8 @@ about_ref: true
 ---
 <div class="container">
   <section class="about-head">
-    <div class="avatar-lg">BS</div>
+    {%- assign avatar_img = site.static_files | where: "path", "/assets/img/avatar.jpg" | first -%}
+    {% if avatar_img %}<img class="avatar-lg avatar-photo" src="{{ '/assets/img/avatar.jpg' | relative_url }}" alt="Bernardo Secades" width="64" height="64">{% else %}<div class="avatar-lg">BS</div>{% endif %}
     <h1>Bernardo Secades</h1>
     <p class="about-tagline">Backend engineer — Go &amp; distributed systems. I build with AI in production and write about what actually works.</p>
   </section>
