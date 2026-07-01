@@ -501,6 +501,12 @@ html[data-theme="dark"] .icon-btn .icon-moon { display: none; }
   font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--fg-mute); margin: 0 0 14px; font-weight: 600;
 }
+.cert-group-title {
+  font-family: var(--mono);
+  font-size: 12px; letter-spacing: 0.08em; font-weight: 600;
+  color: var(--fg); margin: 22px 0 10px;
+}
+.about-certs .cert-group-title:first-of-type { margin-top: 8px; }
 .cert-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .cert-item {
   display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: center;
