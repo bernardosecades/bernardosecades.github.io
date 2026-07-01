@@ -10,12 +10,37 @@ about_ref: true
   <section class="about-head">
     <div class="avatar-lg">BS</div>
     <h1>Bernardo Secades</h1>
+    <p class="about-tagline">Backend engineer — Go &amp; distributed systems. I build with AI in production and write about what actually works.</p>
   </section>
   <div class="about-body">
     <p>Software engineer building backend microservices in Go. I focus on distributed systems: service boundaries, event-driven communication, and finding the right balance between simplicity and resilience.</p>
     <p>I have Claude Code wired into my daily workflow — it's open whenever I code. I use it for reasoning through service designs, catching subtle edge cases during code review, drafting migration plans, and speeding up the boilerplate-heavy parts of Go so I can spend more time on the interesting constraints.</p>
     <p>Beyond personal use, I've been working on cross-team adoption: sharing patterns that work, running demos, and building shared conventions so the whole team can get consistent value out of AI-assisted development without each person reinventing the wheel.</p>
   </div>
+
+  {%- comment -%} Best-first list; render the first 3 that are already published. Flagship applied-AI posts lead and auto-promote as they go live weekly; live tooling posts backfill. {%- endcomment -%}
+  {%- assign start_refs = "reviewing-ai-generated-code,choosing-the-right-model,ai-nearly-shipped-a-bug,multi-agent-when-worth-it,design-with-ai-interlocutor,debugging-with-ai,claude-code-team-marketplace,mcp-when-to-use,claude-code-multi-repo-workspace,claude-code-subagents" | split: "," -%}
+  {%- assign lang_posts = site.posts | where: "lang", page.lang -%}
+  {%- assign now_ts = site.time | date: '%s' | plus: 0 -%}
+  {%- assign shown = 0 -%}
+  <section class="about-start" aria-labelledby="start-heading">
+    <div class="section-label" id="start-heading">Start here</div>
+    <div class="feat-grid">
+      {% for ref in start_refs %}{%- if shown < 3 -%}
+        {%- assign fp = lang_posts | where: "ref", ref | first -%}
+        {%- if fp -%}{%- assign post_ts = fp.date | date: '%s' | plus: 0 -%}{%- if post_ts <= now_ts -%}
+        <a class="feat-card" href="{{ fp.url | relative_url }}">
+          <div class="feat-card-body">
+            <h2>{{ fp.title }}</h2>
+            {% if fp.excerpt_text %}<p>{{ fp.excerpt_text }}</p>{% endif %}
+          </div>
+        </a>
+        {%- assign shown = shown | plus: 1 -%}
+        {%- endif -%}{%- endif -%}
+      {%- endif -%}{% endfor %}
+    </div>
+    <p class="about-start-more"><a href="/en/systems/">See all the systems I've built →</a></p>
+  </section>
 
   <section class="about-certs" aria-labelledby="certs-heading">
     <h2 id="certs-heading" class="about-certs-title">Certifications (18)</h2>
@@ -151,5 +176,9 @@ about_ref: true
 
   <div class="about-socials">
     <a href="https://linkedin.com/in/bernardosecades" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/bernardosecades" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:bernardosecades@gmail.com">Email</a>
+    <a href="/en/#newsletter">Newsletter</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
   </div>
 </div>

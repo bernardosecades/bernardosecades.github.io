@@ -462,6 +462,11 @@ html[data-theme="dark"] .icon-btn .icon-moon { display: none; }
   font-family: var(--serif); font-size: 18px; line-height: 1.7; color: var(--fg);
 }
 .about-body p { margin: 0 0 1.2em; }
+.about-tagline {
+  font-family: var(--sans); font-size: 15px; line-height: 1.5;
+  color: var(--fg-mute); margin: -6px 0 0; max-width: 52ch;
+}
+.about-start { margin: 32px 0 8px; }
 
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
