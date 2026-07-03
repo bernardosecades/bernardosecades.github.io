@@ -174,13 +174,20 @@ about_ref: true
         </div>
       </li>
     </ul>
-    <h3 class="cert-group-title">The Linux Foundation (1)</h3>
+    <h3 class="cert-group-title">The Linux Foundation (2)</h3>
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-badge" aria-hidden="true">L</span>
         <div class="cert-meta">
           <a class="cert-title" href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/780bbaf3-ad3a-45d8-b216-347cafe54670-bernardo-secades-618d039d-d3b0-44cc-8229-74b138695a3a-certificate.pdf" target="_blank" rel="noopener">Getting Started with OpenTelemetry (LFS148)</a>
           <span class="cert-sub">The Linux Foundation · Jul 2026 · <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/780bbaf3-ad3a-45d8-b216-347cafe54670-bernardo-secades-618d039d-d3b0-44cc-8229-74b138695a3a-certificate.pdf" target="_blank" rel="noopener">Verify ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">L</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/780bbaf3-ad3a-45d8-b216-347cafe54670-bernardo-secades-94c3e3f1-8392-4f3d-a53a-3b01e09f2ad5-certificate.pdf" target="_blank" rel="noopener">Secure AI/ML-Driven Software Development (LFEL1012)</a>
+          <span class="cert-sub">The Linux Foundation · Jul 2026 · <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/780bbaf3-ad3a-45d8-b216-347cafe54670-bernardo-secades-94c3e3f1-8392-4f3d-a53a-3b01e09f2ad5-certificate.pdf" target="_blank" rel="noopener">Verify ↗</a></span>
         </div>
       </li>
     </ul>
