@@ -45,7 +45,7 @@ about_ref: true
 
   <section class="about-certs" aria-labelledby="certs-heading">
     <h2 id="certs-heading" class="about-certs-title">Certificaciones</h2>
-    <h3 class="cert-group-title">Anthropic (18)</h3>
+    <h3 class="cert-group-title">Anthropic (19)</h3>
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-badge" aria-hidden="true">A</span>
@@ -171,6 +171,13 @@ about_ref: true
         <div class="cert-meta">
           <a class="cert-title" href="https://verify.skilljar.com/c/2ienkt4jhsxb" target="_blank" rel="noopener">Claude with Google Cloud's Vertex AI</a>
           <span class="cert-sub">Anthropic · Jun 2026 · <a href="https://verify.skilljar.com/c/2ienkt4jhsxb" target="_blank" rel="noopener">Verificar ↗</a></span>
+        </div>
+      </li>
+      <li class="cert-item">
+        <span class="cert-badge" aria-hidden="true">A</span>
+        <div class="cert-meta">
+          <a class="cert-title" href="https://verify.skilljar.com/c/rfa3fjxg68e7" target="_blank" rel="noopener">AI Fluency for Creative Work</a>
+          <span class="cert-sub">Anthropic · Sep 2026 · <a href="https://verify.skilljar.com/c/rfa3fjxg68e7" target="_blank" rel="noopener">Verificar ↗</a></span>
         </div>
       </li>
     </ul>
