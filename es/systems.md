@@ -31,6 +31,8 @@ Abajo está el set de trabajo — las prácticas en las que me apoyo y los siste
 
 - **Elegir modelo como decisión de ingeniería** — empareja el tier y el dial de esfuerzo con la tarea en vez de tirar del modelo más grande; decide sobre un set de evaluación real, no por instinto.{% if _pub contains "/elegir-el-modelo-segun-la-tarea/" %} → [Elegir modelo](/elegir-el-modelo-segun-la-tarea/){% endif %}
 
+- **Cambios guiados por spec con OpenSpec** — deja el plan acordado en el repo dueño como una spec versionada y revisada, para que las siguientes sesiones arranquen desde ficheros y los agentes revisores contrasten el diff con escenarios en lugar de con la memoria.{% if _pub contains "/openspec-la-spec-en-el-repo/" %} → [Mete la spec en el repo](/openspec-la-spec-en-el-repo/){% endif %}
+
 ## Claude Code para automatización real
 
 - **Patrón de bifurcar sesión** — ramificar la conversación actual de Claude para probar una alternativa sin perder el estado en curso de la original. → [Bifurcar sesión](/claude-code-bifurcar-sesion/)

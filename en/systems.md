@@ -31,6 +31,8 @@ Below is the working set — the practices I rely on and the systems I've shippe
 
 - **Model choice as an engineering decision** — match the tier and the effort dial to the task instead of defaulting to the biggest model; decide on a real eval set, not on instinct.{% if _pub contains "/picking-the-right-model-for-the-task/" %} → [Picking a model](/picking-the-right-model-for-the-task/){% endif %}
 
+- **Spec-driven changes with OpenSpec** — put the agreed plan in the owning repo as a versioned, reviewed spec, so later sessions resume from files and reviewer agents check the diff against scenarios instead of memory.{% if _pub contains "/openspec-spec-in-the-repo/" %} → [Put the spec in the repo](/openspec-spec-in-the-repo/){% endif %}
+
 ## Claude Code for real automation
 
 - **Fork-session pattern** — branch the current Claude conversation to try an alternative without losing the in-flight state of the original. → [Fork a session](/claude-code-fork-session/)
