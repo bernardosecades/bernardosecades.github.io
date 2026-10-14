@@ -19,7 +19,7 @@ about_ref: true
     <p>Beyond personal use, I've been working on cross-team adoption: sharing patterns that work, running demos, and building shared conventions so the whole team can get consistent value out of AI-assisted development without each person reinventing the wheel.</p>
   </div>
 
-  {%- comment -%} Best-first list; render the first 3 that are already published. Flagship applied-AI posts lead and auto-promote as they go live weekly; live tooling posts backfill. {%- endcomment -%}
+  {%- comment -%} Best-first list; render the first 3 that are already published. Flagship applied-AI posts lead and auto-promote as they go live every two weeks; live tooling posts backfill. {%- endcomment -%}
   {%- assign start_refs = "reviewing-ai-generated-code,choosing-the-right-model,ai-nearly-shipped-a-bug,multi-agent-when-worth-it,design-with-ai-interlocutor,debugging-with-ai,claude-code-team-marketplace,mcp-when-to-use,claude-code-multi-repo-workspace,claude-code-subagents" | split: "," -%}
   {%- assign lang_posts = site.posts | where: "lang", page.lang -%}
   {%- assign now_ts = site.time | date: '%s' | plus: 0 -%}

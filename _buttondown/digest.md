@@ -1,16 +1,15 @@
 {# ---------------------------------------------------------------
-   Weekly digest — AI Tips & Tricks (EN / ES)
+   Digest — AI Tips & Tricks (EN / ES)
    Compatible con Buttondown (Markdown + plantillas Jinja).
+   Cadencia: 1 post + 1 newsletter cada dos semanas (martes).
+   Fichero de cada envío: _buttondown/YYYY-MM-DD-newsletter.md
 
    Cómo usar:
    1. En Buttondown: New email → pega el contenido de abajo (sin estas
       líneas de comentario, aunque Jinja {# … #} también las elimina).
-   2. Subject line (también puede llevar Jinja):
-        {% if subscriber.metadata.lang == "es" %}Esta semana en AI Tips & Tricks{% else %}This week in AI Tips & Tricks{% endif %}
-
-      Alternativa genérica (sin referencia a la marca):
-        {% if subscriber.metadata.lang == "es" %}Tu dosis semanal de IA ✨{% else %}This week in AI tips ✨{% endif %}
-   3. Rellena los bloques POST_N con los posts de esta semana.
+   2. Subject line (Jinja):
+        {% if subscriber.metadata.lang == "es" %}Tu dosis de IA ✨{% else %}Your dose of AI tips ✨{% endif %}
+   3. Rellena los bloques POST_N con los posts nuevos.
       Si solo hay un post, borra los bloques sobrantes.
    4. Cada subscriber debe tener metadata.lang = "es" o "en".
       Fallback: si no hay metadata, se envía en inglés.
@@ -25,7 +24,7 @@
 
 Hola,
 
-Esto es lo nuevo esta semana en [AI Tips & Tricks](https://claudecodesessions.com/):
+Esto es lo nuevo en [AI Tips & Tricks](https://claudecodesessions.com/):
 
 ### [POST_1_TITULO_ES](https://claudecodesessions.com/POST_1_SLUG_ES/)
 
@@ -55,7 +54,7 @@ POST_3_EXCERPT_ES
 
 Hi,
 
-Here's what's new this week on [AI Tips & Tricks](https://claudecodesessions.com/):
+Here's what's new on [AI Tips & Tricks](https://claudecodesessions.com/):
 
 ### [POST_1_TITLE_EN](https://claudecodesessions.com/POST_1_SLUG_EN/)
 
