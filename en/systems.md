@@ -31,7 +31,7 @@ Below is the working set — the practices I rely on and the systems I've shippe
 
 - **Model choice as an engineering decision** — match the tier and the effort dial to the task instead of defaulting to the biggest model; decide on a real eval set, not on instinct.{% if _pub contains "/picking-the-right-model-for-the-task/" %} → [Picking a model](/picking-the-right-model-for-the-task/){% endif %}
 
-- **Spec-driven changes with OpenSpec** — put the agreed plan in the owning repo as a versioned, reviewed spec, so later sessions resume from files and reviewer agents check the diff against scenarios instead of memory.{% if _pub contains "/openspec-spec-in-the-repo/" %} → [Put the spec in the repo](/openspec-spec-in-the-repo/){% endif %}
+- **Spec-driven changes with OpenSpec** — a team repo that holds only specs: proposals reviewed before any code, one config with rules for the AI, and `specs/` as the catalogue of how each service behaves today, so sessions resume from files and reviewers check the diff against scenarios instead of memory.{% if _pub contains "/openspec-spec-in-the-repo/" %} → [Put the spec in the repo](/openspec-spec-in-the-repo/){% endif %}{% if _pub contains "/openspec-one-repo-for-all-specs/" %} · [One repo for all specs](/openspec-one-repo-for-all-specs/){% endif %}{% if _pub contains "/openspec-spec-before-refactor/" %} · [Spec before the refactor](/openspec-spec-before-refactor/){% endif %}
 
 ## Claude Code for real automation
 

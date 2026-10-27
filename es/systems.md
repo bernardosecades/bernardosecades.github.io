@@ -31,7 +31,7 @@ Abajo está el set de trabajo — las prácticas en las que me apoyo y los siste
 
 - **Elegir modelo como decisión de ingeniería** — empareja el tier y el dial de esfuerzo con la tarea en vez de tirar del modelo más grande; decide sobre un set de evaluación real, no por instinto.{% if _pub contains "/elegir-el-modelo-segun-la-tarea/" %} → [Elegir modelo](/elegir-el-modelo-segun-la-tarea/){% endif %}
 
-- **Cambios guiados por spec con OpenSpec** — deja el plan acordado en el repo dueño como una spec versionada y revisada, para que las siguientes sesiones arranquen desde ficheros y los agentes revisores contrasten el diff con escenarios en lugar de con la memoria.{% if _pub contains "/openspec-la-spec-en-el-repo/" %} → [Mete la spec en el repo](/openspec-la-spec-en-el-repo/){% endif %}
+- **Cambios guiados por spec con OpenSpec** — un repo de equipo solo para specs: propuestas revisadas antes de escribir código, un config con reglas para la IA y `specs/` como catálogo de cómo se comporta hoy cada servicio, para que las sesiones arranquen desde ficheros y los revisores contrasten el diff con escenarios en lugar de con la memoria.{% if _pub contains "/openspec-la-spec-en-el-repo/" %} → [Mete la spec en el repo](/openspec-la-spec-en-el-repo/){% endif %}{% if _pub contains "/openspec-un-repo-para-todas-las-specs/" %} · [Un repo para todas las specs](/openspec-un-repo-para-todas-las-specs/){% endif %}{% if _pub contains "/openspec-spec-antes-del-refactor/" %} · [La spec antes del refactor](/openspec-spec-antes-del-refactor/){% endif %}
 
 ## Claude Code para automatización real
 
