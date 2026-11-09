@@ -41,6 +41,8 @@ Below is the working set — the practices I rely on and the systems I've shippe
 
 - **Scope vs. permissions, kept separate** — `cwd` decides what Claude *sees*, `.claude/settings.json` decides what Claude *does*. Treat them as two independent levers in every project. → [Scope vs. permissions](/claude-code-scope-vs-permissions/)
 
+- **Each rule on its rung of the harness** — CLAUDE.md, skill, feedback loop or hook depending on how costly it is to break; a rule broken twice moves up a rung, and the hook's message tells the agent what to do instead.{% if _pub contains "/fix-the-harness-not-the-prompt/" %} → [Fix the harness, not the prompt](/fix-the-harness-not-the-prompt/){% endif %}
+
 ## Agentic workflows in production
 
 - **Subagent-based exploration to keep main context lean** — push grep/read-heavy work into an `Explore` subagent so the main session pays ~1k for a summary instead of ~40k for a transcript. → [Subagents have their own context window](/claude-code-subagents/)

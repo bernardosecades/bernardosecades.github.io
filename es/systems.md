@@ -41,6 +41,8 @@ Abajo está el set de trabajo — las prácticas en las que me apoyo y los siste
 
 - **Alcance vs. permisos, separados** — el `cwd` decide lo que Claude *ve*, `.claude/settings.json` decide lo que Claude *hace*. Trátalos como dos palancas independientes en cada proyecto. → [Alcance vs. permisos](/claude-code-alcance-vs-permisos/)
 
+- **Cada regla en su escalón del harness** — CLAUDE.md, skill, feedback loop o hook según lo cara que salga romperla; una regla que se rompe dos veces sube un escalón, y el mensaje del hook le dice al agente qué hacer en su lugar.{% if _pub contains "/arregla-el-harness-no-el-prompt/" %} → [Arregla el harness, no el prompt](/arregla-el-harness-no-el-prompt/){% endif %}
+
 ## Workflows agentivos en producción
 
 - **Exploración con subagentes para mantener el contexto principal limpio** — mover el trabajo pesado de grep/read a un subagente `Explore` para que la sesión principal pague ~1k por un resumen en vez de ~40k por un transcript. → [Los subagentes tienen su propia ventana de contexto](/claude-code-subagentes/)
