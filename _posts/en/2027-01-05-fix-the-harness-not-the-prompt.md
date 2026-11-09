@@ -8,7 +8,7 @@ read_min: 5
 excerpt_text: "I had a rule in CLAUDE.md: don't hand-edit vendor/. The agent followed it almost every time. On the rare occasions it didn't, the patch passed the tests and vanished on the next go mod vendor. Rewording the rule did nothing. Moving it to a different part of the harness fixed it."
 ---
 
-My team's Go services vendor their internal libraries. When a change touches `auditlib`, the right move is to edit the `auditlib` repo, point the `go.mod` in `orders` at that local copy with a `replace`, and regenerate with `go mod vendor`. I had a line in CLAUDE.md saying exactly that: don't hand-edit `vendor/`.
+My team's Go services vendor their internal libraries. When a change touches `auditlib`, the right move is to edit the `auditlib` repo, point the `go.mod` in `orders` at that local copy with a `replace`, and regenerate with `go mod vendor`. All of this happens locally, while I develop on my laptop with the `auditlib` repo cloned next to it. I had a line in CLAUDE.md saying exactly that: don't hand-edit `vendor/`.
 
 The agent followed it almost every time. On the few occasions it didn't, it patched `vendor/example.com/auditlib/...` directly, the tests passed and the change looked fine. Then someone ran `go mod vendor` again and the patch silently disappeared. The bug came back and nobody could tell why, because the code that fixed it no longer existed anywhere.
 
@@ -71,7 +71,7 @@ And in `~/.claude/settings.json`:
 }
 ```
 
-The `go.mod` check is there so a PHP project's `vendor/` isn't caught by mistake. And since I only watch Edit and Write, `go mod vendor` keeps working, which is exactly what I want the agent to run. If you've never set up a hook, I covered the basics with a notification hook in [this post](/claude-code-hooks-notification/).
+The `go.mod` check is there because `vendor/` isn't unique to Go, and I don't want to block other tools' copies. And since I only watch Edit and Write, `go mod vendor` keeps working, which is exactly what I want the agent to run. The hook lives in my `~/.claude/settings.json`, so it only acts on my local Claude Code sessions. It has no effect on the pipeline. If you've never set up a hook, I covered the basics with a notification hook in [this post](/claude-code-hooks-notification/).
 
 ## Three things I learned building it
 
@@ -102,6 +102,7 @@ When a rule moves up a rung, I remove it from the rung below. The `vendor/` ban 
 
 ## Limitations
 
+- **It only covers my local sessions.** My teammates and the pipeline don't have it. For that you'd need a CI step that runs `go mod vendor` and fails if `git diff` finds changes.
 - **Bash can get around it.** A `sed -i` into `vendor/` goes straight through. It's a known gap.
 - **Every hook is code to maintain**, and it adds some latency to every write. Not every rule deserves one. Only the ones that break and cost you.
 - **A block with no explanation teaches very little.** With a poor message, the agent would know what not to do but not what to do instead.

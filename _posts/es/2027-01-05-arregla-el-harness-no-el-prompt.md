@@ -8,7 +8,7 @@ read_min: 5
 excerpt_text: "Tenía una regla en el CLAUDE.md: no edites vendor/ a mano. El agente la cumplía casi siempre, y las pocas veces que no, el parche pasaba los tests y desaparecía en el siguiente go mod vendor. Reescribir la regla no sirvió. Moverla a otra parte del harness, sí."
 ---
 
-En los servicios Go de mi equipo las librerías internas van vendorizadas. Si un cambio toca `auditlib`, lo correcto es editar el repo de `auditlib`, apuntar el `go.mod` de `orders` a esa copia local con un `replace` y regenerar con `go mod vendor`. Tenía una línea en el CLAUDE.md que lo decía: no edites `vendor/` a mano.
+En los servicios Go de mi equipo las librerías internas van vendorizadas. Si un cambio toca `auditlib`, lo correcto es editar el repo de `auditlib`, apuntar el `go.mod` de `orders` a esa copia local con un `replace` y regenerar con `go mod vendor`. Todo esto pasa en local, mientras desarrollo en mi portátil con el repo de `auditlib` clonado al lado. Tenía una línea en el CLAUDE.md que lo decía: no edites `vendor/` a mano.
 
 El agente la cumplía casi siempre. Las pocas veces que no, parcheaba directamente `vendor/example.com/auditlib/...`, los tests pasaban y el cambio parecía bueno. Hasta que alguien volvía a ejecutar `go mod vendor` y el parche desaparecía sin avisar. El bug volvía y nadie entendía por qué, porque el código que lo arreglaba ya no existía en ningún sitio.
 
@@ -71,7 +71,7 @@ Y en `~/.claude/settings.json`:
 }
 ```
 
-La comprobación del `go.mod` está para no bloquear el `vendor/` de un proyecto PHP. Y como solo miro Edit y Write, `go mod vendor` sigue funcionando, que es justo lo que quiero que haga el agente. Si nunca has montado un hook, en [este post](/claude-code-hooks-notificacion/) explico lo básico con uno de notificaciones.
+La comprobación del `go.mod` está porque `vendor/` no es exclusivo de Go, y no quiero bloquear el de otras herramientas. Y como solo miro Edit y Write, `go mod vendor` sigue funcionando, que es justo lo que quiero que haga el agente. El hook está en mi `~/.claude/settings.json`, así que solo actúa en mis sesiones de Claude Code en local. A la pipeline no le afecta. Si nunca has montado un hook, en [este post](/claude-code-hooks-notificacion/) explico lo básico con uno de notificaciones.
 
 ## Tres cosas que aprendí montándolo
 
@@ -102,6 +102,7 @@ Cuando una regla sube de escalón, la quito del sitio anterior. La prohibición 
 
 ## Limitations
 
+- **Solo cubre mis sesiones en local.** Ni mis compañeros ni la pipeline lo tienen. Para eso haría falta un paso de CI que ejecute `go mod vendor` y falle si `git diff` encuentra cambios.
 - **Desde Bash el hook se puede saltar.** Un `sed -i` sobre `vendor/` pasa sin problema. Es un agujero conocido.
 - **Cada hook es código que hay que mantener** y añade algo de latencia a cada escritura. No todas las reglas merecen uno. Solo las que se rompen y salen caras.
 - **Un bloqueo sin explicación enseña poco.** Si el mensaje del hook fuera malo, el agente sabría qué no hacer, pero no qué hacer en su lugar.
