@@ -53,6 +53,10 @@ Abajo está el set de trabajo — las prácticas en las que me apoyo y los siste
 
 - **Fan-out multi-agente, con el coste honesto** — cuándo N agentes paralelos ganan a uno (trabajo independiente y ancho) y cuándo solo multiplican la factura; descompón por independencia real y presupuesta la fusión.{% if _pub contains "/orquestacion-multi-agente-cuando-merece-la-pena/" %} → [Cuándo el fan-out se paga solo](/orquestacion-multi-agente-cuando-merece-la-pena/){% endif %}
 
+{% if _pub contains "/agentic-engineer-harness-de-equipo/" %}- **Un harness para todo el equipo** — spec revisada por producto antes del código, un test por escenario, revisores automáticos antes que una persona y cada fallo llevado a su capa del harness, para que la revisión deje de depender de que alguien se lea 2.000 líneas. → [Ir detrás de la IA no escala](/agentic-engineer-harness-de-equipo/)
+
+{% endif %}
+
 ## Casos de fallo y lecciones aprendidas
 
 - **Prioridad de skills y sobrescrituras silenciosas** — una skill personal gana en silencio sobre una skill de proyecto o plugin con el mismo nombre. Nombres distintivos, no sobrescrituras ingeniosas. → [¿Qué skill gana cuando los nombres colisionan?](/claude-code-prioridad-skills/)

@@ -53,6 +53,10 @@ Below is the working set — the practices I rely on and the systems I've shippe
 
 - **Multi-agent fan-out, costed honestly** — when N parallel agents beat one (independent, wide work) and when they just multiply the bill; decompose by genuine independence and budget the merge.{% if _pub contains "/multi-agent-orchestration-when-its-worth-it/" %} → [When the fan-out pays for itself](/multi-agent-orchestration-when-its-worth-it/){% endif %}
 
+{% if _pub contains "/agentic-engineer-team-harness/" %}- **A harness for the whole team** — spec reviewed by product before any code, one test per scenario, automated reviewers before a person, and every failure taken to the harness layer it belongs to, so review stops depending on someone reading 2,000 lines. → [Chasing the AI doesn't scale](/agentic-engineer-team-harness/)
+
+{% endif %}
+
 ## Failure cases & lessons learned
 
 - **Skill priority and silent overrides** — a personal skill silently wins over a project or plugin skill with the same name. Distinctive names, not clever overrides. → [Which skill wins when names collide?](/claude-code-skill-priority/)
